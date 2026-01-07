@@ -49,15 +49,20 @@
 .testimonials-carousel-container {
     position: relative;
     width: 100%;
-    padding: 2rem 0;
+    padding: 0 3rem; /* Add padding for buttons */
+    overflow: hidden; /* Only hide X overflow */
+}
+
+.testimonials-viewport {
     overflow: hidden;
+    width: 100%;
 }
 
 .testimonials-track {
     display: flex;
     gap: 2rem;
-    padding: 1rem;
-    transition: transform 0.5s ease-out;
+    padding: 1rem 0;
+    /* transition is handled via JS inline style for infinite loop logic */
     cursor: grab;
 }
 
@@ -65,10 +70,37 @@
     cursor: grabbing;
 }
 
-/* Hide scrollbar but allow swipe on mobile if we decide to use native scroll later */
-.testimonials-viewport {
-    overflow: hidden;
-    width: 100%;
+/*
+   Sizing Logic:
+   Gap is 2rem (32px).
+
+   Mobile (1 item):
+   Item width = 100% of viewport.
+
+   Desktop (3 items):
+   Viewport width = 100%.
+   Available space = 100% - 2 * gap (approx).
+   Item width = (100% - 4rem) / 3.
+
+   Actually, flex-basis is better.
+*/
+
+.testimonial-card {
+    /* Default mobile: 1 item visible */
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .testimonial-card {
+        /* Desktop: 3 items visible.
+           Formula: (100% - (itemsVisible - 1) * gap) / itemsVisible
+           Gap is 2rem. 2 gaps for 3 items.
+           width = (100% - 4rem) / 3
+        */
+        flex: 0 0 calc((100% - 4rem) / 3);
+        max-width: calc((100% - 4rem) / 3);
+    }
 }
 
 .testi-btn {
@@ -85,10 +117,16 @@
     cursor: pointer;
     z-index: 10;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: background 0.3s;
 }
 
-.testi-prev { left: 10px; }
-.testi-next { right: 10px; }
+.testi-btn:hover {
+    background: #e6c890; /* lighter secondary */
+}
+
+/* Move buttons outside/to the edges */
+.testi-prev { left: 0; }
+.testi-next { right: 0; }
 
 @media (max-width: 768px) {
     .hero-carousel {

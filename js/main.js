@@ -275,40 +275,139 @@ function setupTestimonials() {
     const track = document.getElementById('testimonials-track');
     if (!track) return;
 
-    // Generate 14 identical cards
+    // 1. Generate Cards
     const text = siteContent.home.testimonials.text;
-    let cardsHTML = '';
-    for (let i = 0; i < 14; i++) {
-        cardsHTML += `
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"${text}"</p>
-                <div class="testimonial-avatar"></div>
-            </div>
+    const items = [];
+    // Creating 6 items is enough to demonstrate infinite loop with 3 visible
+    const totalItems = 6;
+
+    for (let i = 0; i < totalItems; i++) {
+        const card = document.createElement('div');
+        card.className = 'testimonial-card';
+        card.innerHTML = `
+            <div class="testimonial-avatar"></div>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"${text}"</p>
         `;
+        items.push(card);
     }
-    track.innerHTML = cardsHTML;
 
-    // Carousel Logic
-    const cardWidth = 320; // 300px width + 20px gap approx
-    let scrollAmount = 0;
-    const maxScroll = track.scrollWidth - track.clientWidth;
+    // 2. Clone items for infinite loop
+    // We need clones at beginning (prev) and end (next).
+    // If showing 3, we need at least 3 clones at each end for smooth transition.
+    const itemsToClone = 3;
 
-    document.getElementById('testi-next').addEventListener('click', () => {
-        const containerWidth = document.querySelector('.testimonials-viewport').clientWidth;
-        scrollAmount += cardWidth;
-        // Limit scroll
-        if (scrollAmount > track.scrollWidth - containerWidth) {
-            scrollAmount = 0; // Loop back to start
+    // Append original items first to track to have base content
+    items.forEach(item => track.appendChild(item));
+
+    // Create clones
+    const firstClones = items.slice(0, itemsToClone).map(item => {
+        const clone = item.cloneNode(true);
+        clone.classList.add('clone-first'); // Debug class
+        return clone;
+    });
+
+    const lastClones = items.slice(-itemsToClone).map(item => {
+        const clone = item.cloneNode(true);
+        clone.classList.add('clone-last');
+        return clone;
+    });
+
+    // Append/Prepend clones
+    firstClones.forEach(clone => track.appendChild(clone));
+    lastClones.reverse().forEach(clone => track.insertBefore(clone, track.firstChild));
+
+    // 3. Carousel State
+    let currentIndex = itemsToClone; // Start at first real item (index 3) because of 3 prepend clones
+    let itemWidth = 0;
+    let gap = 32; // 2rem = 32px
+    let isTransitioning = false;
+    let autoPlayInterval;
+
+    // 4. Update Dimensions
+    function updateDimensions() {
+        const card = track.querySelector('.testimonial-card');
+        if (card) {
+            // Get exact width including potential sub-pixel rendering
+            itemWidth = card.getBoundingClientRect().width;
         }
-        track.style.transform = `translateX(-${scrollAmount}px)`;
+        // Initial position: - (currentIndex * (itemWidth + gap))
+        updateTrackPosition(false);
+    }
+
+    function updateTrackPosition(enableTransition = true) {
+        if (enableTransition) {
+            track.style.transition = 'transform 0.5s ease-in-out';
+        } else {
+            track.style.transition = 'none';
+        }
+        const position = -(currentIndex * (itemWidth + gap));
+        track.style.transform = `translateX(${position}px)`;
+    }
+
+    // 5. Navigation Logic
+    function moveNext() {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        currentIndex++;
+        updateTrackPosition(true);
+    }
+
+    function movePrev() {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        currentIndex--;
+        updateTrackPosition(true);
+    }
+
+    // Handle Transition End (Infinite Loop Jump)
+    track.addEventListener('transitionend', () => {
+        isTransitioning = false;
+
+        // If we moved past the last real item (to first clone)
+        if (currentIndex >= items.length + itemsToClone) {
+            track.style.transition = 'none';
+            currentIndex = itemsToClone; // Jump to first real item
+            updateTrackPosition(false);
+        }
+
+        // If we moved before the first real item (to last clone)
+        if (currentIndex < itemsToClone) {
+            track.style.transition = 'none';
+            currentIndex = items.length + itemsToClone - 1; // Jump to last real item
+            updateTrackPosition(false);
+        }
+    });
+
+    // 6. Event Listeners
+    document.getElementById('testi-next').addEventListener('click', () => {
+        moveNext();
+        resetAutoPlay();
     });
 
     document.getElementById('testi-prev').addEventListener('click', () => {
-        scrollAmount -= cardWidth;
-        if (scrollAmount < 0) {
-            scrollAmount = 0;
-        }
-        track.style.transform = `translateX(-${scrollAmount}px)`;
+        movePrev();
+        resetAutoPlay();
     });
+
+    window.addEventListener('resize', () => {
+        updateDimensions();
+    });
+
+    // 7. Auto Play
+    function startAutoPlay() {
+        autoPlayInterval = setInterval(moveNext, 3000);
+    }
+
+    function resetAutoPlay() {
+        clearInterval(autoPlayInterval);
+        startAutoPlay();
+    }
+
+    // Init
+    // Wait for a tick to ensure rendering for width calc
+    setTimeout(() => {
+        updateDimensions();
+        startAutoPlay();
+    }, 100);
 }
