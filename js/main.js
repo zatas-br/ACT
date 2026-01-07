@@ -2,7 +2,62 @@ document.addEventListener('DOMContentLoaded', () => {
     loadContent();
     setupHeroCarousel();
     setupTestimonials();
+    setupSmoothScroll();
+    handlePageLoader();
 });
+
+function handlePageLoader() {
+    const loader = document.getElementById('page-loader');
+    if (loader) {
+        // Hide loader after a short delay to ensure initial render is done
+        // or immediately if we consider JS loadContent sufficient.
+        // A small delay makes the transition feel deliberate.
+        setTimeout(() => {
+            loader.classList.add('loader-hidden');
+            // Remove from DOM after transition
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500); // match css transition duration
+        }, 500);
+    }
+}
+
+function setupSmoothScroll() {
+    // We attach this after loadContent because that's when links are generated
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            const currentPath = window.location.pathname;
+
+            // Check if we are on the home page (index.html, / or root)
+            const isHomePage = currentPath.endsWith('index.html') || currentPath === '/' || currentPath.endsWith('/');
+
+            if (isHomePage) {
+                if (href === 'index.html') {
+                    // Clicking "Home" while on Home
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else if (href.startsWith('index.html#')) {
+                    // Clicking anchor links like #contato or #resultados
+                    const targetId = href.split('#')[1];
+                    const target = document.getElementById(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            } else {
+                // If not on home page
+                // If link is about.html (current page presumably if we are on about), handle "Sobre" click?
+                // The nav links are: index.html, about.html, index.html#contato, index.html#resultados
+                // If on about.html and clicking about.html -> reload. User didn't ask to change this.
+                // If on about.html and clicking index.html or index.html#... -> normal navigation.
+            }
+        });
+    });
+}
 
 function loadContent() {
     const content = siteContent;
