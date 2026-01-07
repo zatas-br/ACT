@@ -206,20 +206,27 @@ function renderCards(containerId, items) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
-    container.innerHTML = items.map(item => `
+    container.innerHTML = items.map(item => {
+        // Create excerpt
+        const description = item.description || "";
+        const excerpt = description.length > 100 ? description.substring(0, 100) + "..." : description;
+
+        return `
         <div class="card">
             <details>
                 <summary>
                     <div class="card-image-container">
                         <img src="${item.image}" alt="${item.title}">
                     </div>
-                    <div class="card-overlay">
-                        <span class="card-title-preview">${item.title}</span>
+                    <div class="card-body">
+                        <h3 class="card-title">${item.title}</h3>
+                        <p class="card-excerpt">${excerpt}</p>
+                        <span class="card-cta">Saiba mais &rarr;</span>
                     </div>
                 </summary>
                 <div class="modal-overlay" onclick="closeDetails(this)">
                     <div class="card-content" onclick="event.stopPropagation()">
-                        <button onclick="closeDetails(this.parentElement.parentElement)" style="float: right; border: none; background: none; font-size: 1.5rem; cursor: pointer;">&times;</button>
+                        <button onclick="closeDetails(this.parentElement.parentElement)" class="modal-close-btn">&times;</button>
                         <h3>${item.title}</h3>
                         ${item.description ? `<p>${item.description}</p>` : ''}
                         ${item.list && item.list.length > 0 ? `<ul>${item.list.map(li => `<li>${li}</li>`).join('')}</ul>` : ''}
@@ -228,7 +235,7 @@ function renderCards(containerId, items) {
                 </div>
             </details>
         </div>
-    `).join('');
+    `}).join('');
 }
 
 function closeDetails(element) {
