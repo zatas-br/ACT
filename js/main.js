@@ -136,12 +136,10 @@ function loadHomeContent(content) {
     document.getElementById('about-text').innerHTML = home.about.paragraphs.map(p => `<p>${p}</p>`).join('');
     document.getElementById('about-btn').innerText = home.about.buttonText;
 
-    // Services Section
+    // Services Section (Includes Segments now)
     document.getElementById('services-title').innerText = home.services.title;
-    renderCards('services-grid', home.services.items);
-
-    // Segments Section
-    renderCards('segments-grid', home.segments.items);
+    const allServices = [...home.services.items, ...home.segments.items];
+    renderCards('services-grid', allServices);
 
     // Expertise Section
     document.getElementById('expertise-title').innerText = home.expertises.title;
@@ -423,7 +421,9 @@ function setupTestimonials() {
 
     // 7. Auto Play
     function startAutoPlay() {
-        autoPlayInterval = setInterval(moveNext, 3000);
+        // User requested "come from left to right" which implies items entering from left
+        // Standard carousel moves right-to-left (next). We switch to prev for this effect.
+        autoPlayInterval = setInterval(movePrev, 3000);
     }
 
     function resetAutoPlay() {

@@ -38,12 +38,21 @@ section h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .card {
-    flex: 1 1 300px;
+    flex: 1 1 280px; /* Base size for wrapping logic */
     max-width: 350px;
+    width: 100%;
+}
+
+@media (min-width: 1250px) {
+    .card {
+        /* Enforce 4 columns on large screens: 100% / 4 = 25%, minus gap adjustment */
+        flex: 0 1 calc(25% - 1.5rem);
+        max-width: none;
+    }
 }
 
 .contact-container {
