@@ -35,10 +35,15 @@ section h2 {
 }
 
 .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 2rem;
+}
+
+.card {
+    flex: 1 1 300px;
+    max-width: 350px;
 }
 
 .contact-container {

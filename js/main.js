@@ -14,6 +14,8 @@ function handlePageLoader() {
         // A small delay makes the transition feel deliberate.
         setTimeout(() => {
             loader.classList.add('loader-hidden');
+            document.body.classList.add('loaded'); // Trigger content animation
+
             // Remove from DOM after transition
             setTimeout(() => {
                 loader.style.display = 'none';
@@ -23,7 +25,27 @@ function handlePageLoader() {
 }
 
 function setupSmoothScroll() {
-    // Attach listeners to nav links injected by loadContent
+    // 1. Handle Hash on Page Load (e.g. from About -> Home#Contact)
+    if (window.location.hash) {
+        const targetId = window.location.hash.substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            // Wait a bit for layout to settle (especially with dynamic content)
+            setTimeout(() => {
+                const header = document.querySelector('header');
+                const headerOffset = header ? header.offsetHeight : 0;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }, 300); // Small delay to allow content loading
+        }
+    }
+
+    // 2. Attach listeners to nav links injected by loadContent
     const navLinks = document.querySelectorAll('.nav-link');
 
     navLinks.forEach(link => {
@@ -32,32 +54,29 @@ function setupSmoothScroll() {
             const currentPath = window.location.pathname;
 
             // Determine if current page is Home (matches /, /index.html, or empty path)
-            // Using includes('about.html') to rule out About page is simpler, or explicit check:
             const isHomePage = !currentPath.includes('about.html');
 
             // Logic for Home Page
             if (isHomePage) {
-                // 1. Home Link (Scroll to Top)
+                // Home Link (Scroll to Top)
                 if (href === 'index.html' || href === '#' || href === '/') {
                     e.preventDefault();
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                     return;
                 }
 
-                // 2. Section Links (Scroll to ID)
-                // Extract ID if link contains '#' (e.g. "index.html#contato" or "#contato")
+                // Section Links (Scroll to ID)
                 if (href.includes('#')) {
                     const parts = href.split('#');
-                    // Check if the path part matches home (empty or index.html) or if it's just a hash
                     const pathPart = parts[0];
                     const targetId = parts[1];
 
+                    // If linking to current page (home)
                     if (pathPart === 'index.html' || pathPart === '' || pathPart === '/') {
                         const targetElement = document.getElementById(targetId);
                         if (targetElement) {
                             e.preventDefault();
 
-                            // Calculate scroll position compensating for fixed header
                             const header = document.querySelector('header');
                             const headerOffset = header ? header.offsetHeight : 0;
                             const elementPosition = targetElement.getBoundingClientRect().top;
@@ -71,7 +90,8 @@ function setupSmoothScroll() {
                     }
                 }
             }
-            // If not home page, allow default navigation (which will reload/go to index.html#section)
+            // If not home page, default navigation works.
+            // If navigating FROM About TO Home#Contact, the page load logic above handles the scroll.
         });
     });
 }
