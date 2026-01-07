@@ -1,0 +1,73 @@
+section {
+    padding: 4rem 0;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+}
+
+.section-alt {
+    background-color: var(--bg-alt);
+}
+
+/* Specific Section Styles */
+.about-content {
+    background-image: linear-gradient(rgba(11,35,38,0.85), rgba(11,35,38,0.85)), url("../img/png/elementclarinho.svg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.destaque {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    background-color: var(--bg-alt);
+    border-radius: 50px;
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-2px);
+    background-color: var(--primary-light);
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+}
