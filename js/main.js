@@ -23,7 +23,7 @@ function handlePageLoader() {
 }
 
 function setupSmoothScroll() {
-    // We attach this after loadContent because that's when links are generated
+    // Attach listeners to nav links injected by loadContent
     const navLinks = document.querySelectorAll('.nav-link');
 
     navLinks.forEach(link => {
@@ -31,30 +31,47 @@ function setupSmoothScroll() {
             const href = link.getAttribute('href');
             const currentPath = window.location.pathname;
 
-            // Check if we are on the home page (index.html, / or root)
-            const isHomePage = currentPath.endsWith('index.html') || currentPath === '/' || currentPath.endsWith('/');
+            // Determine if current page is Home (matches /, /index.html, or empty path)
+            // Using includes('about.html') to rule out About page is simpler, or explicit check:
+            const isHomePage = !currentPath.includes('about.html');
 
+            // Logic for Home Page
             if (isHomePage) {
-                if (href === 'index.html') {
-                    // Clicking "Home" while on Home
+                // 1. Home Link (Scroll to Top)
+                if (href === 'index.html' || href === '#' || href === '/') {
                     e.preventDefault();
                     window.scrollTo({ top: 0, behavior: 'smooth' });
-                } else if (href.startsWith('index.html#')) {
-                    // Clicking anchor links like #contato or #resultados
-                    const targetId = href.split('#')[1];
-                    const target = document.getElementById(targetId);
-                    if (target) {
-                        e.preventDefault();
-                        target.scrollIntoView({ behavior: 'smooth' });
+                    return;
+                }
+
+                // 2. Section Links (Scroll to ID)
+                // Extract ID if link contains '#' (e.g. "index.html#contato" or "#contato")
+                if (href.includes('#')) {
+                    const parts = href.split('#');
+                    // Check if the path part matches home (empty or index.html) or if it's just a hash
+                    const pathPart = parts[0];
+                    const targetId = parts[1];
+
+                    if (pathPart === 'index.html' || pathPart === '' || pathPart === '/') {
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            e.preventDefault();
+
+                            // Calculate scroll position compensating for fixed header
+                            const header = document.querySelector('header');
+                            const headerOffset = header ? header.offsetHeight : 0;
+                            const elementPosition = targetElement.getBoundingClientRect().top;
+                            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
                     }
                 }
-            } else {
-                // If not on home page
-                // If link is about.html (current page presumably if we are on about), handle "Sobre" click?
-                // The nav links are: index.html, about.html, index.html#contato, index.html#resultados
-                // If on about.html and clicking about.html -> reload. User didn't ask to change this.
-                // If on about.html and clicking index.html or index.html#... -> normal navigation.
             }
+            // If not home page, allow default navigation (which will reload/go to index.html#section)
         });
     });
 }
