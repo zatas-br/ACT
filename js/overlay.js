@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // torna grupos de <details> "exclusivos" (quando um abre, os outros fecham)
   function setupExclusiveDetails(selector) {
     document.querySelectorAll(selector).forEach(detail => {
       detail.addEventListener('toggle', () => {
@@ -12,69 +11,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  [
-    '.abaservicos .card details',
-    '.empresas .container details',
-    '.abasegmentos .card details'
-  ].forEach(setupExclusiveDetails);
+  function setupOverlay(cardSelector) {
+    document.querySelectorAll(cardSelector).forEach(card => {
+      const details = card.querySelector('details');
+      const slidetxt = card.querySelector('.slidetxt');
 
-  document.querySelectorAll('.abaservicos .card').forEach(card => {
-    const img = card.querySelector('.slideimg');
-    const overlay = card.querySelector('.overlay');
+      if (details && slidetxt) {
+        details.addEventListener('toggle', (e) => {
+          if (details.open) {
+            // Prevent closing immediately
+            e.stopPropagation();
 
-    // ao clicar na imagem, abre o modal
-    if (img) {
-      img.addEventListener('click', e => {
-        e.stopPropagation();
-        card.classList.add('open');
-      });
-    }
+            // Show overlay
+            const overlay = document.createElement('div');
+            overlay.className = 'overlay';
+            card.appendChild(overlay);
 
-    // ao clicar no overlay, fecha
-    if (overlay) {
-      overlay.addEventListener('click', e => {
-        card.classList.remove('open');
-      });
-    }
+            // Position slidetxt
+            slidetxt.style.display = 'block';
 
-    // ao clicar em qualquer outro lugar da página, fecha também
-    document.addEventListener('click', e => {
-      if (card.classList.contains('open')) {
-        card.classList.remove('open');
+            // Close when clicking overlay
+            overlay.addEventListener('click', () => {
+              details.open = false;
+              card.removeChild(overlay);
+              slidetxt.style.display = 'none';
+            });
+          } else {
+            const overlay = card.querySelector('.overlay');
+            if (overlay) {
+              card.removeChild(overlay);
+            }
+            slidetxt.style.display = 'none';
+          }
+        });
       }
     });
+  }
 
-    // evita que clique dentro do popup (slidetxt) feche imediatamente
-    const slidetxt = card.querySelector('.slidetxt');
-    if (slidetxt) slidetxt.addEventListener('click', e => e.stopPropagation());
-  });
+  setupExclusiveDetails('.abaservicos .card details');
+  setupExclusiveDetails('.abasegmentos .card details');
 
-  // mesmo comportamento para os cards de abasegmentos
-  document.querySelectorAll('.abasegmentos .card').forEach(card => {
-    const img = card.querySelector('.slideimg');
-    const overlay = card.querySelector('.overlay');
-
-    if (img) {
-      img.addEventListener('click', e => {
-        e.stopPropagation();
-        card.classList.add('open');
-      });
-    }
-
-    if (overlay) {
-      overlay.addEventListener('click', e => {
-        card.classList.remove('open');
-      });
-    }
-
-    // fecha ao clicar fora
-    document.addEventListener('click', e => {
-      if (card.classList.contains('open')) {
-        card.classList.remove('open');
-      }
-    });
-
-    const slidetxt = card.querySelector('.slidetxt');
-    if (slidetxt) slidetxt.addEventListener('click', e => e.stopPropagation());
-  });
+  setupOverlay('.abaservicos .card');
+  setupOverlay('.abasegmentos .card');
 });

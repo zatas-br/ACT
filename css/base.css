@@ -1,0 +1,63 @@
+/*--------------------------------------
+  Importação de fontes
+--------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/*--------------------------------------
+  HEADER E NAVEGAÇÃO
+--------------------------------------*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0B2326;
+  height: 95px;
+}
+
+nav {
+  text-align: end;
+  margin: 0;
+  margin-right: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  text-align: end;
+  font-size: medium;
+  padding: 5px;
+}
+
+.logo {
+  margin-left: 19px;
+  width: 200px;
+  height: auto;
+}
+
+/*--------------------------------------
+  RODAPÉ
+--------------------------------------*/
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px 0;
+  background: #0B2326;
+  color: rgb(87, 84, 84);
+}
+
+footer img {
+  width: 20px;
+  height: 17px;
+  vertical-align: middle;
+}
+
+/*--------------------------------------
+  MEDIA QUERIES - DESKTOP
+--------------------------------------*/
+@media (min-width: 1024px) {
+  nav {
+    margin-right: 45px;
+  }
+}

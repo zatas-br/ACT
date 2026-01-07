@@ -1,0 +1,7 @@
+127.0.0.1 - - [07/Jan/2026 17:31:38] "GET /about.html HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jan/2026 17:31:38] "GET /css/styles_about.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jan/2026 17:31:38] "GET /img/png/1.png HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jan/2026 17:31:38] "GET /js/content.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jan/2026 17:31:38] "GET /js/text-loader.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jan/2026 17:31:38] "GET /css/base.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jan/2026 17:31:39] "GET /img/png/Element_claro.svg HTTP/1.1" 200 -
