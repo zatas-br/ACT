@@ -27,17 +27,17 @@ const siteContent = {
       items: [
         {
           image: "img/servicos/1.png",
-          title: "Empreender & Inovar",
-          description: "A ACT atua diretamente e apoia empreendedores que desejam transformar ideias em negócios sólidos e competitivos. Atuamos com:",
+          title: "Empresas Familiares",
+          description: "A ACT é especialista em governança e evolução de negócios familiares, com foco em:",
           list: [
-            "modelagem de negócios;",
-            "validação de hipóteses de mercado;",
-            "construção de produtos, serviços e MVPs;",
-            "análise de potenciais tecnológicos;",
-            "implantação de metodologias ágeis e processos digitais;",
-            "mentorias em hackathons, aceleradoras e ecossistemas de inovação."
+            "organização de papéis, funções e fluxos de decisão;",
+            "processos de sucessão estruturada; com acompanhamento profissional da Psicologia quando necessário.",
+            "fortalecimento de relações entre sócios;",
+            "construção ou revisão da filosofia empresarial (missão, visão, valores);",
+            "madurecimento da cultura e dos líderes;",
+            "planejamento estratégico com metas factíveis e indicadores sólidos."
           ],
-          footer: "Trabalhamos para transformar criatividade em estratégia, tecnologia em eficiência e ideias em resultados reais."
+          footer: "Nosso trabalho reúne técnica e sensibilidade para apoiar famílias que desejam construir legado com paz, clareza e profissionalismo."
         },
         {
           image: "img/servicos/2.png",
@@ -55,30 +55,31 @@ const siteContent = {
         },
         {
           image: "img/servicos/3.png",
-          title: "Indústrias & Varejos",
-          description: "Para indústrias e varejos que precisam se adaptar ao mercado contemporâneo, a ACT oferece:",
+          title: "Empresas Familiares",
+          description: "A ACT é especialista em governança e evolução de negócios familiares, com foco em:",
           list: [
-            "reposicionamento estratégico;",
-            "eficiência operacional;",
-            "análise de processos e logística;",
-            "integração com tecnologias e IA;",
-            "desenvolvimento de lideranças e cultura;",
-            "indicadores de performance e planejamento de mercado."
+            "organização de papéis, funções e fluxos de decisão;",
+            "processos de sucessão estruturada; com acompanhamento profissional da Psicologia quando necessário.",
+            "fortalecimento de relações entre sócios;",
+            "construção ou revisão da filosofia empresarial (missão, visão, valores);",
+            "madurecimento da cultura e dos líderes;",
+            "planejamento estratégico com metas factíveis e indicadores sólidos."
           ],
-          footer: "Nosso foco é construir operações mais competitivas, ágeis e sustentáveis, com base em dados, inovação e clareza estratégica."
+          footer: "Nosso trabalho reúne técnica e sensibilidade para apoiar famílias que desejam construir legado com paz, clareza e profissionalismo."
         },
         {
           image: "img/servicos/4.png",
-          title: "Hotéis & Restaurantes",
-          description: "A ACT oferece consultoria completa para negócios de hospitalidade que precisam elevar sua performance, eficiência e experiência do cliente. Atuamos em:",
+          title: "Empresas Familiares",
+          description: "A ACT é especialista em governança e evolução de negócios familiares, com foco em:",
           list: [
-            "organização administrativa, financeira, comercial e operacional;",
-            "recrutamento, treinamento e supervisão de equipes, incluindo gerência;",
-            "desenho de processos, padronização e implantação de KPIs;",
-            "A&B, governança, manutenção e gestão do ponto de equilíbrio;",
-            "planejamento estratégico para sazonalidade, eventos e mercado corporativo."
+            "organização de papéis, funções e fluxos de decisão;",
+            "processos de sucessão estruturada; com acompanhamento profissional da Psicologia quando necessário.",
+            "fortalecimento de relações entre sócios;",
+            "construção ou revisão da filosofia empresarial (missão, visão, valores);",
+            "madurecimento da cultura e dos líderes;",
+            "planejamento estratégico com metas factíveis e indicadores sólidos."
           ],
-          footer: "Para ambientes residenciais e corporativos, incluímos serviços especializados de organização de espaços, home offices e rotinas funcionais. Nosso foco: processos inteligentes, pessoas qualificadas e experiência impecável para os hóspedes."
+          footer: "Nosso trabalho reúne técnica e sensibilidade para apoiar famílias que desejam construir legado com paz, clareza e profissionalismo."
         }
       ]
     },
