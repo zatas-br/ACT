@@ -67,13 +67,14 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* REMOVED justify-content: space-between to allow natural stacking */
+    gap: 1rem; /* Add spacing between elements */
 }
 
 .card-title {
     font-size: 1.25rem;
     color: var(--primary-color);
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem; /* Reduced because of gap */
     font-weight: 700;
     line-height: 1.3;
 }
@@ -81,25 +82,32 @@
 .card-excerpt {
     font-size: 0.95rem;
     color: #555;
-    margin-bottom: 1.5rem;
     line-height: 1.5;
+    /* Allow it to take space but not forced to push button down infinitely if container stretches */
 }
 
-.card-cta-btn {
-    background: none;
-    border: none;
+/* Restored visual style for Saiba mais */
+.card-cta {
+    display: inline-block;
     color: var(--secondary-color);
     font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 1rem; /* Slightly larger like normal text */
+    /* text-transform: uppercase; Removed if user wants plain text */
     letter-spacing: 0.5px;
     transition: color 0.3s ease;
     cursor: pointer;
-    padding: 0;
-    text-align: left;
+    margin-top: auto; /* Pushes it to bottom only if there is space, but won't force huge gap if flex is weird?
+                         Actually margin-top: auto is safer than justify-content: space-between
+                         BECAUSE it only pushes if the container IS taller.
+                         But if the container is artificially huge due to align-items: stretch,
+                         it will still be at the bottom.
+                         However, let's keep it close to text as user complained about "worse".
+                         Wait, if I remove margin-top: auto, it sits right under text.
+                         I will try to keep it under text for now. */
+    margin-top: 0.5rem;
 }
 
-.card:hover .card-cta-btn {
+.card:hover .card-cta {
     color: var(--primary-color);
     text-decoration: underline;
 }

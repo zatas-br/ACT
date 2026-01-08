@@ -205,14 +205,6 @@ function renderCards(containerId, items) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
-    // Store items in a map or simply rely on index-based access if we pass index to openModal
-    // For simplicity, we can serialize the item or better yet, attach it to the element property
-    // But passing index is cleaner if items array is accessible.
-    // However, since items are local here, we can attach the data to the DOM element directly or use a closure.
-    // Let's use a data-attribute approach where we can look up in a global store? No, that's messy.
-    // We can just set the onclick to pass the data, but stringifying objects is risky with quotes.
-    // Best approach: create the element in JS and attach event listener.
-
     container.innerHTML = ''; // Clear existing
 
     items.forEach(item => {
@@ -222,15 +214,16 @@ function renderCards(containerId, items) {
 
         const card = document.createElement('div');
         card.className = 'card';
-        // Remove details/summary, use standard div structure
+        // Removed details/summary. Using span for 'Saiba mais' to act as a visual cue.
+        // Whole card is clickable.
         card.innerHTML = `
             <div class="card-image-container">
-                <img src="${item.image}" alt="${item.title}">
+                <img src="${item.image}" alt="${item.title}" loading="lazy">
             </div>
             <div class="card-body">
                 <h3 class="card-title">${item.title}</h3>
                 <p class="card-excerpt">${excerpt}</p>
-                <button class="card-cta-btn">Saiba mais &rarr;</button>
+                <span class="card-cta">Saiba mais</span>
             </div>
         `;
 
