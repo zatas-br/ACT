@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupTestimonials();
     setupSmoothScroll();
     handlePageLoader();
+    setupModal();
 });
 
 function handlePageLoader() {
@@ -204,45 +205,97 @@ function renderCards(containerId, items) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
-    container.innerHTML = items.map(item => {
+    // Store items in a map or simply rely on index-based access if we pass index to openModal
+    // For simplicity, we can serialize the item or better yet, attach it to the element property
+    // But passing index is cleaner if items array is accessible.
+    // However, since items are local here, we can attach the data to the DOM element directly or use a closure.
+    // Let's use a data-attribute approach where we can look up in a global store? No, that's messy.
+    // We can just set the onclick to pass the data, but stringifying objects is risky with quotes.
+    // Best approach: create the element in JS and attach event listener.
+
+    container.innerHTML = ''; // Clear existing
+
+    items.forEach(item => {
         // Create excerpt
         const description = item.description || "";
         const excerpt = description.length > 100 ? description.substring(0, 100) + "..." : description;
 
-        return `
-        <div class="card">
-            <details>
-                <summary>
-                    <div class="card-image-container">
-                        <img src="${item.image}" alt="${item.title}">
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">${item.title}</h3>
-                        <p class="card-excerpt">${excerpt}</p>
-                        <span class="card-cta">Saiba mais &rarr;</span>
-                    </div>
-                </summary>
-                <div class="modal-overlay" onclick="closeDetails(this)">
-                    <div class="card-content" onclick="event.stopPropagation()">
-                        <button onclick="closeDetails(this.parentElement.parentElement)" class="modal-close-btn">&times;</button>
-                        <h3>${item.title}</h3>
-                        ${item.description ? `<p>${item.description}</p>` : ''}
-                        ${item.list && item.list.length > 0 ? `<ul>${item.list.map(li => `<li>${li}</li>`).join('')}</ul>` : ''}
-                        ${item.footer ? `<p style="margin-top: 1rem; font-weight: 500;">${item.footer}</p>` : ''}
-                    </div>
-                </div>
-            </details>
-        </div>
-    `}).join('');
+        const card = document.createElement('div');
+        card.className = 'card';
+        // Remove details/summary, use standard div structure
+        card.innerHTML = `
+            <div class="card-image-container">
+                <img src="${item.image}" alt="${item.title}">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">${item.title}</h3>
+                <p class="card-excerpt">${excerpt}</p>
+                <button class="card-cta-btn">Saiba mais &rarr;</button>
+            </div>
+        `;
+
+        // Add click listener to the whole card
+        card.addEventListener('click', () => {
+            openModal(item);
+        });
+
+        container.appendChild(card);
+    });
 }
 
-function closeDetails(element) {
-    // Navigate up to find the details element
-    const details = element.closest('details');
-    if (details) {
-        details.removeAttribute('open');
+// --- Global Modal Logic ---
+
+function setupModal() {
+    const modalOverlay = document.getElementById('global-modal-overlay');
+    const closeBtn = document.getElementById('global-modal-close');
+
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                closeModal();
+            }
+        });
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    });
+}
+
+function openModal(item) {
+    const modalOverlay = document.getElementById('global-modal-overlay');
+    const modalBody = document.getElementById('global-modal-body');
+
+    if (modalOverlay && modalBody) {
+        // Populate content
+        modalBody.innerHTML = `
+            <h3>${item.title}</h3>
+            ${item.description ? `<p>${item.description}</p>` : ''}
+            ${item.list && item.list.length > 0 ? `<ul>${item.list.map(li => `<li>${li}</li>`).join('')}</ul>` : ''}
+            ${item.footer ? `<p style="margin-top: 1rem; font-weight: 500;">${item.footer}</p>` : ''}
+        `;
+
+        // Show modal
+        modalOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
     }
 }
+
+function closeModal() {
+    const modalOverlay = document.getElementById('global-modal-overlay');
+    if (modalOverlay) {
+        modalOverlay.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+}
+
 
 // --- Carousel Logic ---
 
@@ -255,9 +308,6 @@ function setupHeroCarousel() {
         "img/Capas/2.png", "img/Capas/3.png", "img/Capas/4.png",
         "img/Capas/5.png", "img/Capas/6.png", "img/Capas/7.png"
     ];
-    // Mobile images logic could be added here if needed, utilizing <picture> in JS generation if desired.
-    // For simplicity and cleaner refactor, we stick to standard img for now or we can map them.
-    // Original used <picture> for mobile. Let's replicate that for best results.
 
     const slidesHTML = images.map((img, index) => {
         const mobileImg = img.replace('Capas', 'Mobile');
@@ -318,8 +368,6 @@ function setupTestimonials() {
     }
 
     // 2. Clone items for infinite loop
-    // We need clones at beginning (prev) and end (next).
-    // If showing 3, we need at least 3 clones at each end for smooth transition.
     const itemsToClone = 3;
 
     // Append original items first to track to have base content

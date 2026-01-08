@@ -35,24 +35,12 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
+    cursor: pointer; /* Clickable */
 }
 
 .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-}
-
-.card summary {
-    list-style: none;
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.card summary::-webkit-details-marker {
-    display: none;
 }
 
 .card-image-container {
@@ -97,45 +85,50 @@
     line-height: 1.5;
 }
 
-.card-cta {
-    display: inline-block;
+.card-cta-btn {
+    background: none;
+    border: none;
     color: var(--secondary-color);
     font-weight: 600;
     text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 0.5px;
     transition: color 0.3s ease;
+    cursor: pointer;
+    padding: 0;
+    text-align: left;
 }
 
-.card:hover .card-cta {
+.card:hover .card-cta-btn {
     color: var(--primary-color);
     text-decoration: underline;
 }
 
-/* Modal/Details Popup */
-.card details[open] .modal-overlay {
+/* Global Modal Overlay */
+.global-modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    z-index: 2000;
-    display: flex;
+    z-index: 9999;
+    display: none; /* Hidden by default */
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    animation: fadeInModal 0.3s ease;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-@keyframes fadeInModal {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.global-modal-overlay.active {
+    display: flex;
+    opacity: 1;
 }
 
-.card-content {
+.modal-content-wrapper {
     background-color: #fff;
     color: var(--text-dark);
     padding: 2.5rem;
@@ -145,7 +138,13 @@
     max-height: 85vh;
     overflow-y: auto;
     position: relative;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.global-modal-overlay.active .modal-content-wrapper {
+    transform: translateY(0);
 }
 
 .modal-close-btn {
@@ -165,7 +164,7 @@
     color: var(--secondary-color);
 }
 
-.card-content h3 {
+.modal-content-wrapper h3 {
     color: var(--secondary-color);
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
@@ -173,13 +172,13 @@
     padding-bottom: 1rem;
 }
 
-.card-content ul {
+.modal-content-wrapper ul {
     margin: 1rem 0;
     padding-left: 1.5rem;
     list-style-type: disc;
 }
 
-.card-content li {
+.modal-content-wrapper li {
     margin-bottom: 0.5rem;
 }
 
@@ -189,7 +188,6 @@
     color: var(--text-dark);
     padding: 2rem;
     border-radius: 8px;
-    /* Dimensions handled by carousel layout */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -197,7 +195,7 @@
     text-align: center;
     gap: 1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    flex-shrink: 0; /* Prevent shrinking in flex container */
+    flex-shrink: 0;
 }
 
 .stars {
