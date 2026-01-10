@@ -324,17 +324,18 @@ function setupHeroCarousel() {
     }
 
     document.getElementById('hero-prev').addEventListener('click', () => {
-        index = (index - 1 + total) % total;
+        index = (index + 1) % total;
         update();
     });
 
     document.getElementById('hero-next').addEventListener('click', () => {
-        index = (index + 1) % total;
+        index = (index - 1 + total) % total;
         update();
     });
 
     setInterval(() => {
-        index = (index + 1) % total;
+        // Left to Right movement means index decreases
+        index = (index - 1 + total) % total;
         update();
     }, 5000);
 }
@@ -344,21 +345,21 @@ function setupTestimonials() {
     if (!track) return;
 
     // 1. Generate Cards
-    const text = siteContent.home.testimonials.text;
+    const testimonialData = siteContent.home.testimonials.items || [];
     const items = [];
-    // Creating 6 items is enough to demonstrate infinite loop with 3 visible
-    const totalItems = 6;
 
-    for (let i = 0; i < totalItems; i++) {
+    testimonialData.forEach(data => {
         const card = document.createElement('div');
         card.className = 'testimonial-card';
+        // Ensure valid HTML in author field (it already contains strong tags/br)
         card.innerHTML = `
             <div class="testimonial-avatar"></div>
             <div class="stars">★★★★★</div>
-            <p class="testimonial-text">"${text}"</p>
+            <p class="testimonial-text">"${data.text}"</p>
+            <div class="testimonial-author">${data.author}</div>
         `;
         items.push(card);
-    }
+    });
 
     // 2. Clone items for infinite loop
     const itemsToClone = 3;
@@ -464,7 +465,7 @@ function setupTestimonials() {
     function startAutoPlay() {
         // User requested "come from left to right" which implies items entering from left
         // Standard carousel moves right-to-left (next). We switch to prev for this effect.
-        autoPlayInterval = setInterval(movePrev, 3000);
+        autoPlayInterval = setInterval(movePrev, 5000);
     }
 
     function resetAutoPlay() {
