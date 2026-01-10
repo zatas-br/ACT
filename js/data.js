@@ -10,15 +10,10 @@ const siteContent = {
   },
   home: {
     about: {
-      title: "Sobre nós",
+      title: "Sobre a ACT",
       paragraphs: [
-        "A ACT é uma consultoria fundada em 2009 e especializada em Organização, Desenvolvimento e Expansão empresarial. Atuamos de forma estratégica, técnica e humana — conduzindo empresas, líderes e comunidades em processos de transformação madura, artesanal, tecnológica, silenciosa e profundamente efetiva. E, afetiva!",
-        "Nosso trabalho integra gestão, inovação, cultura e educação voltados ao futuro. Acreditamos na força das organizações, sejam empresariais ou sociais, como instrumentos capazes de promover bem-estar, dignidade, pertencimento e resultados sustentáveis. Trabalhamos com empresas de diferentes portes e segmentos, conduzindo projetos que vão desde a estruturação de um novo negócio até processos complexos de expansão, sucessão e valuation. Ao longo dessa jornada, construímos uma abordagem única: análises precisas, visão sistêmica e respeito absoluto ao capital humano.",
-        "<strong>A ACT atua sempre com três pilares centrais, formando quatro ações de resultados:</strong>",
-        "<span class='destaque'>ORGANIZAR</span><br><strong>Entender onde a empresa está, com clareza técnica e humana.</strong><br><strong>Entender onde a empresa está e onde quer chegar; com clareza técnica e humana.</strong>",
-        "<span class='destaque'>DESENVOLVER</span><br><strong>Fortalecer pessoas, processos, cultura e tecnologias.</strong>",
-        "<span class='destaque'>EXPANDIR</span><br><strong>Consolidar modelos de crescimento seguros, lucrativos e alinhados ao propósito dos fundadores.</strong>",
-        "Nosso compromisso é apoiar organizações em sua evolução com consciência, estratégia e profundidade, preservando suas essências, valores e histórias. Essa base técnica se soma a princípios que trazem uma perspectiva real e futurista, que compreende as organizações como espaços de convivência, criação e impacto positivo no bem-estar coletivo, e integram quatro pilares essenciais da liderança empresarial:<br>(1) ampliar receitas com inteligência estratégica,<br>(2) reduzir despesas sem comprometer a qualidade,<br>(3) direcionar investimentos de forma consciente e sustentável, e<br>(4) proteger o patrimônio construído com mérito e visão de longo prazo."
+        "<p>A ACT é uma consultoria fundada em 2009 e especializada em Organização, Desenvolvimento e Expansão Empresarial. Atuamos de forma estratégica, técnica e humana — conduzindo empresas, líderes e comunidades em processos de transformação madura, artesanal, tecnológica, silenciosa e profundamente efetiva. E, afetiva!</p>",
+        "<p>Nosso trabalho integra gestão, inovação, cultura e educação voltados ao futuro. Acreditamos na força das organizações, sejam empresariais ou sociais, como instrumentos capazes de promover bem-estar, dignidade, pertencimento e resultados sustentáveis.</p>"
       ],
       buttonText: "Conheça mais"
     },
@@ -274,16 +269,26 @@ const siteContent = {
   },
   about: {
     history: {
-      title: "História, Essência e Atuação da ACT",
+      title: "1. SOBRE A ACT — (versão institucional oficial)",
       content: [
-        "A ACT é uma consultoria fundada em 2009 e especializada em Organização, Desenvolvimento e Expansão empresarial. Atuamos de forma estratégica, técnica e humana — conduzindo empresas, líderes e comunidades em processos de transformação madura, artesanal, tecnológica, silenciosa e profundamente efetiva. E, afetiva!",
-        "Nosso trabalho integra gestão, inovação, cultura e educação voltados ao futuro. Acreditamos na força das organizações, sejam empresariais ou sociais, como instrumentos capazes de promover bem-estar, dignidade, pertencimento e resultados sustentáveis. Trabalhamos com empresas de diferentes portes e segmentos, conduzindo projetos que vão desde a estruturação de um novo negócio até processos complexos de expansão, sucessão e valuation. Ao longo dessa jornada, construímos uma abordagem única: análises precisas, visão sistêmica e respeito absoluto ao capital humano.",
-        "<strong>A ACT atua nas seguintes demandas, expertises, pilares e propósitos:</strong>",
-        "<strong>DEMANDAS</strong><br>Indústrias – Varejos – Serviços",
-        "<strong>EXPERTISES</strong><br>Plano de Negócios – Plano de Expansão - Valuation",
-        "<strong>PILARES</strong><br><strong>ORGANIZAR</strong> - Entender onde a empresa está, com clareza técnica e humana.<br><strong>DESENVOLVER</strong> - Fortalecer pessoas, processos, cultura e tecnologias.<br><strong>EXPANDIR</strong> - Consolidar modelos de crescimento seguros, lucrativos e alinhados ao propósito dos fundadores.",
-        "Nosso compromisso é apoiar organizações em sua evolução com consciência, estratégia e profundidade, preservando suas essências, valores e histórias.",
-        "<strong>PROPÓSITOS EMPRESARIAIS</strong><br>(1) ampliar receitas com inteligência estratégica,<br>(2) reduzir despesas sem comprometer a qualidade,<br>(3) direcionar investimentos de forma consciente e sustentável, e<br>(4) proteger o patrimônio construído com mérito e visão de longo prazo."
+        "<p>A ACT é uma consultoria fundada em 2009 e especializada em Organização, Desenvolvimento e Expansão Empresarial. Atuamos de forma estratégica, técnica e humana — conduzindo empresas, líderes e comunidades em processos de transformação madura, artesanal, tecnológica, silenciosa e profundamente efetiva. E, afetiva!</p>",
+        "<p>Nosso trabalho integra gestão, inovação, cultura e educação voltados ao futuro. Acreditamos na força das organizações, sejam empresariais ou sociais, como instrumentos capazes de promover bem-estar, dignidade, pertencimento e resultados sustentáveis. Trabalhamos com empresas de diferentes portes e segmentos, conduzindo projetos que vão desde a estruturação de um novo negócio até processos complexos de facilities, expansão, sucessão e valuation. Ao longo dessa jornada, construímos uma abordagem única: análises precisas, visão sistêmica e respeito absoluto ao capital humano.</p>",
+        "<p><strong>A ACT atua nas seguintes demandas, expertises, pilares e propósitos:</strong></p>",
+        "<h3 style='margin-top: 1.5rem; color: var(--secondary-color);'>DEMANDAS</h3>",
+        "<p>Indústrias – Varejos – Serviços – Organizações & Instituições Diversas</p>",
+        "<h3 style='margin-top: 1.5rem; color: var(--secondary-color);'>EXPERTISES</h3>",
+        "<p>Plano de Negócios – Plano de Expansão – Valuation</p>",
+        "<h4 style='margin-top: 1rem; color: #fff;'>1️- Plano de Negócios</h4>",
+        "<p style='margin-bottom: 0.5rem;'><strong>(Tirando a ideia da cabeça e do papel)</strong><br>A ACT transforma ideias em negócios viáveis. Estrutura o plano de negócios desde a concepção até a operação inicial, analisando investimentos, retornos, localização, obras, equipes, regras internas, missão, perfil dos fundadores, sócios, investidores e fontes de capital.</p>",
+        "<h4 style='margin-top: 1rem; color: #fff;'>2- Organização & Expansão</h4>",
+        "<p style='margin-bottom: 0.5rem;'>Quando o negócio já existe, mas cresce sem controle, com muitas dúvidas sobre o resultado real da Empresa. A ACT profissionaliza a gestão “familiar”, sem deixar se perder a essência estrutural. Implanta processos, governança, orçamento, indicadores, facilities, preparação para sucessão familiar, modelo de expansão (inclusive franquias), e eleva a performance da Organização para crescer com segurança e atratividade ao capital.</p>",
+        "<h4 style='margin-top: 1rem; color: #fff;'>3- Valuation & Futuro (Maturidade)</h4>",
+        "<p style='margin-bottom: 0.5rem;'>A ACT revela o valor real da empresa, o que é fundamental para decisões estratégicas: venda parcial ou total, entrada de investidores, planejamento sucessório ou valorização do negócio antes da negociação. O valuation vira ferramenta de escolha, não apenas de preço.</p>",
+        "<h3 style='margin-top: 1.5rem; color: var(--secondary-color);'>PILARES</h3>",
+        "<ul style='list-style: none; padding-left: 0;'><li><strong>ORGANIZAR</strong> - Entender onde a empresa está e onde quer chegar, determinando ações com clareza técnica e humanizada.</li><li><strong>DESENVOLVER</strong> – Desenvolver pessoas, fortalecendo o capital humano alimentando o engajamento, desenvolver mercados, processos, cultura e tecnologias.</li><li><strong>EXPANDIR</strong> – Visualizar, avaliar e trabalhar cenários de mercado passíveis para a expansão. Consolidar modelos de crescimento seguros, lucrativos e alinhados ao propósito dos fundadores e seus stakeholder(s).</li></ul>",
+        "<p style='margin-top: 1rem;'>Nosso compromisso é ajudar organizações a evoluírem com consciência, estratégia e profundidade — sem perderem suas essências, seus valores e suas histórias.</p>",
+        "<h3 style='margin-top: 1.5rem; color: var(--secondary-color);'>PROPÓSITOS EMPRESARIAIS</h3>",
+        "<ul style='list-style: none; padding-left: 0;'><li>(1) ampliar receitas com inteligência estratégica,</li><li>(2) reduzir despesas sem comprometer a qualidade,</li><li>(3) entender a diferença de despesas, custos e investimentos, direcionando tudo com consciência de uma organização vencedora!</li><li>(4) proteger o patrimônio adquirido, construído com mérito e visão de longo prazo.</li></ul>"
       ]
     },
     alexandre: {
@@ -299,7 +304,7 @@ const siteContent = {
       valuesList: [
         "Atitude — agir com coragem, clareza e senso de responsabilidade.",
         "Comprometimento — entregar com profundidade, ética e respeito ao ser humano.",
-        "Técnica — aplicar métodos sólidos, contemporâneos e baseados em evidências",
+        "Técnica — aplicar métodos sólidos, contemporâneos e baseados em evidências.",
         "Inovação Consciente — tecnologia a serviço das pessoas.",
         "Educação Permanente — conhecimento como mecanismo de evolução coletiva.",
         "Cultura e Arte — inspiração como recurso estratégico e humano.",

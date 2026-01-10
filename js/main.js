@@ -134,7 +134,7 @@ function loadHomeContent(content) {
 
     // About Section
     document.getElementById('about-title').innerText = home.about.title;
-    document.getElementById('about-text').innerHTML = home.about.paragraphs.map(p => `<p>${p}</p>`).join('');
+    document.getElementById('about-text').innerHTML = home.about.paragraphs.join('');
     document.getElementById('about-btn').innerText = home.about.buttonText;
 
     // Services Section (Includes Segments now)
@@ -177,7 +177,7 @@ function loadAboutPageContent(content) {
 
     // History
     document.getElementById('history-title').innerText = about.history.title;
-    document.getElementById('history-content').innerHTML = about.history.content.map(p => `<p>${p}</p>`).join('');
+    document.getElementById('history-content').innerHTML = about.history.content.join('');
 
     // Alexandre
     document.getElementById('alexandre-title').innerText = about.alexandre.title;
@@ -379,7 +379,7 @@ function setupTestimonials() {
         card.className = 'testimonial-card';
 
         // Truncate text logic
-        const maxChars = 200;
+        const maxChars = 140;
         let displayText = data.text;
         let isTruncated = false;
 
