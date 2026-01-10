@@ -96,15 +96,7 @@
     letter-spacing: 0.5px;
     transition: color 0.3s ease;
     cursor: pointer;
-    margin-top: auto; /* Pushes it to bottom only if there is space, but won't force huge gap if flex is weird?
-                         Actually margin-top: auto is safer than justify-content: space-between
-                         BECAUSE it only pushes if the container IS taller.
-                         But if the container is artificially huge due to align-items: stretch,
-                         it will still be at the bottom.
-                         However, let's keep it close to text as user complained about "worse".
-                         Wait, if I remove margin-top: auto, it sits right under text.
-                         I will try to keep it under text for now. */
-    margin-top: 0.5rem;
+    margin-top: auto; /* Ensure button aligns to bottom */
 }
 
 .card:hover .card-cta {

@@ -1,0 +1,16 @@
+.testimonial-avatar-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    display: block;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.testimonial-img-wrapper {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

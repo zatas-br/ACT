@@ -1,0 +1,12 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* Cor padrão (Modo Claro) */
+    path { fill: #000000; }
+
+    /* Cor para o Modo Escuro */
+    @media (prefers-color-scheme: dark) {
+      path { fill: #ffffff; }
+    }
+  </style>
+  <circle cx="50" cy="50" r="40" />
+</svg>
