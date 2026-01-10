@@ -267,18 +267,44 @@ function openModal(item) {
     const modalBody = document.getElementById('global-modal-body');
 
     if (modalOverlay && modalBody) {
-        // Populate content
-        modalBody.innerHTML = `
-            <h3>${item.title}</h3>
-            ${item.description ? `<p>${item.description}</p>` : ''}
-            ${item.list && item.list.length > 0 ? `<ul>${item.list.map(li => `<li>${li}</li>`).join('')}</ul>` : ''}
-            ${item.footer ? `<p style="margin-top: 1rem; font-weight: 500;">${item.footer}</p>` : ''}
-        `;
+        let content = '';
+
+        if (item.text && item.author) {
+            // Testimonial Modal Layout
+            const stars = renderStars(item.stars || 5);
+            content = `
+                <div class="modal-testimonial">
+                    <div class="testimonial-avatar" style="margin: 0 auto 1.5rem; width: 80px; height: 80px;"></div>
+                    <div class="stars" style="font-size: 1.5rem; text-align: center; margin-bottom: 1rem;">${stars}</div>
+                    <p class="modal-text" style="font-size: 1.1rem; line-height: 1.6; font-style: italic; text-align: center; margin-bottom: 1.5rem;">"${item.text}"</p>
+                    <div class="modal-author" style="text-align: center;">${item.author}</div>
+                </div>
+            `;
+        } else {
+            // Service/Segment Modal Layout
+            content = `
+                <h3>${item.title}</h3>
+                ${item.description ? `<p>${item.description}</p>` : ''}
+                ${item.list && item.list.length > 0 ? `<ul>${item.list.map(li => `<li>${li}</li>`).join('')}</ul>` : ''}
+                ${item.footer ? `<p style="margin-top: 1rem; font-weight: 500;">${item.footer}</p>` : ''}
+            `;
+        }
+
+        modalBody.innerHTML = content;
 
         // Show modal
         modalOverlay.classList.add('active');
         document.body.style.overflow = 'hidden'; // Prevent background scrolling
     }
+}
+
+function renderStars(rating) {
+    const fullStar = '★';
+    const emptyStar = '☆';
+    const maxStars = 5;
+    const filled = Math.min(Math.max(rating, 0), maxStars);
+    const empty = maxStars - filled;
+    return `<span style="color: gold;">${fullStar.repeat(filled)}</span><span style="color: #ccc;">${emptyStar.repeat(empty)}</span>`;
 }
 
 function closeModal() {
@@ -351,13 +377,35 @@ function setupTestimonials() {
     testimonialData.forEach(data => {
         const card = document.createElement('div');
         card.className = 'testimonial-card';
+
+        // Truncate text logic
+        const maxChars = 200;
+        let displayText = data.text;
+        let isTruncated = false;
+
+        if (displayText.length > maxChars) {
+            displayText = displayText.substring(0, maxChars) + '...';
+            isTruncated = true;
+        }
+
+        const starsHTML = renderStars(data.stars || 5);
+
         // Ensure valid HTML in author field (it already contains strong tags/br)
         card.innerHTML = `
             <div class="testimonial-avatar"></div>
-            <div class="stars">★★★★★</div>
-            <p class="testimonial-text">"${data.text}"</p>
+            <div class="stars">${starsHTML}</div>
+            <p class="testimonial-text">"${displayText}"</p>
+            ${isTruncated ? '<span class="read-more">Saiba mais...</span>' : ''}
             <div class="testimonial-author">${data.author}</div>
         `;
+
+        // Add click listener to open modal with full info
+        // We bind the original data object which contains the full text
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', () => {
+            openModal(data);
+        });
+
         items.push(card);
     });
 

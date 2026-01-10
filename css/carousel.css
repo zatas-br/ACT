@@ -133,6 +133,19 @@
     margin-bottom: 0.2rem;
 }
 
+.read-more {
+    color: var(--secondary-color);
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
 .testi-btn {
     position: absolute;
     top: 50%;
