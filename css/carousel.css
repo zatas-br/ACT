@@ -186,4 +186,9 @@
 
 @media (max-width: 768px) {
     /* Height removal for responsiveness */
+    .hero-carousel,
+    .hero-slide img {
+        /* Use svh (Small Viewport Height) to account for mobile browser UI bars */
+        max-height: calc(100svh - var(--header-height, 95px));
+    }
 }
