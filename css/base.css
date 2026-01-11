@@ -19,6 +19,8 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-color) transparent;
 }
 
 body {
@@ -27,6 +29,21 @@ body {
     background-color: var(--primary-color);
     color: var(--text-color);
     overflow-x: hidden;
+}
+
+/* Custom Scrollbar for Webkit */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    border: 2px solid var(--primary-color); /* Creates padding effect if track is colored, or just style */
 }
 
 img {
@@ -55,4 +72,29 @@ a {
     margin: 0 auto;
     padding: 0 1rem;
     width: 100%;
+}
+
+/* Expertise Read More Animation */
+#expertise-hidden-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+#expertise-hidden-content.expanded {
+    max-height: 1500px;
+    opacity: 1;
+}
+
+/* Scroll Animation */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
 }

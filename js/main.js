@@ -9,7 +9,34 @@ document.addEventListener('DOMContentLoaded', () => {
     handlePageLoader();
     setupModal();
     setupLanguageToggle();
+    setupScrollAnimation();
 });
+
+function setupScrollAnimation() {
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Animate only once
+            }
+        });
+    }, observerOptions);
+
+    // Function to observe new elements
+    window.observeScrollElements = () => {
+        const elements = document.querySelectorAll('.fade-up:not(.visible)');
+        elements.forEach(el => observer.observe(el));
+    };
+
+    // Initial observation
+    window.observeScrollElements();
+}
 
 function setupLanguageToggle() {
     const toggleBtn = document.getElementById('lang-toggle');
@@ -122,6 +149,8 @@ function loadContent(lang) {
     // --- Home Specific ---
     if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname.endsWith('/')) {
         loadHomeContent(content);
+        // Trigger scroll observer update after content load
+        if (window.observeScrollElements) window.observeScrollElements();
     }
 
     // --- About Specific ---
@@ -155,7 +184,65 @@ function loadHomeContent(content) {
     if (expertiseTitle) expertiseTitle.innerText = home.expertises.title;
     
     const expertiseIntro = document.getElementById('expertise-intro');
-    if (expertiseIntro) expertiseIntro.innerHTML = home.expertises.paragraphs.map(p => p.trim().startsWith('<') ? p : `<p>${p}</p>`).join('');
+    if (expertiseIntro) {
+        let visibleContent = '';
+        let hiddenContent = '';
+        let splitFound = false;
+        const triggerSubstring = "Ao longo dessa jornada";
+
+        home.expertises.paragraphs.forEach(p => {
+            const isRawHtml = p.trim().startsWith('<');
+            const formattedP = isRawHtml ? p : `<p>${p}</p>`;
+            
+            if (p.includes(triggerSubstring)) {
+                if (isRawHtml) {
+                    visibleContent += p + `<span id="expertise-show-more-trigger" style="cursor: pointer; color: var(--secondary-color); font-weight: bold; margin-left: 0.5rem;">Saiba mais...</span>`;
+                } else {
+                    // Inject span inside the paragraph for inline effect
+                    visibleContent += `<p>${p} <span id="expertise-show-more-trigger" style="cursor: pointer; color: var(--secondary-color); font-weight: bold; margin-left: 0.5rem;">Saiba mais...</span></p>`;
+                }
+                splitFound = true;
+            } else if (splitFound) {
+                hiddenContent += formattedP;
+            } else {
+                visibleContent += formattedP;
+            }
+        });
+
+        if (splitFound) {
+            expertiseIntro.innerHTML = `
+                ${visibleContent}
+                <div id="expertise-hidden-content">
+                    ${hiddenContent}
+                    <p id="expertise-show-less-trigger" style="cursor: pointer; color: var(--secondary-color); font-weight: bold; margin-top: 1rem;">Mostrar menos</p>
+                </div>
+            `;
+            
+            // Add Event Listeners
+            const showMoreBtn = document.getElementById('expertise-show-more-trigger');
+            const showLessBtn = document.getElementById('expertise-show-less-trigger');
+            const hiddenDiv = document.getElementById('expertise-hidden-content');
+
+            if (showMoreBtn && hiddenDiv) {
+                showMoreBtn.addEventListener('click', () => {
+                    hiddenDiv.classList.add('expanded');
+                    showMoreBtn.style.display = 'none';
+                });
+            }
+
+            if (showLessBtn && hiddenDiv && showMoreBtn) {
+                showLessBtn.addEventListener('click', () => {
+                    hiddenDiv.classList.remove('expanded');
+                    showMoreBtn.style.display = 'inline-block';
+                    showMoreBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                });
+            }
+
+        } else {
+            // Fallback if text not found (e.g. English version or data changed)
+            expertiseIntro.innerHTML = home.expertises.paragraphs.map(p => p.trim().startsWith('<') ? p : `<p>${p}</p>`).join('');
+        }
+    }
     
     renderCards('expertise-grid', home.expertises.items);
 
@@ -237,7 +324,7 @@ function renderCards(containerId, items) {
         const excerpt = textToTruncate.length > 100 ? textToTruncate.substring(0, 100) + "..." : textToTruncate;
 
         const card = document.createElement('div');
-        card.className = 'card';
+        card.className = 'card fade-up';
         card.innerHTML = `
             <div class="card-image-container">
                 <img src="${item.image}" alt="${item.title}" loading="lazy">
@@ -403,7 +490,7 @@ function setupTestimonials(itemsData) {
 
     itemsData.forEach(data => {
         const card = document.createElement('div');
-        card.className = 'testimonial-card';
+        card.className = 'testimonial-card fade-up';
 
         const maxChars = 140;
         let displayText = data.text;

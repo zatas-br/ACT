@@ -14,7 +14,7 @@ const translations = {
         title: "Sobre a ACT",
         paragraphs: [
           "<p>A ACT é uma consultoria fundada em 2009 e especializada em Organização, Desenvolvimento e Expansão Empresarial. Atuamos de forma estratégica, técnica e humana — conduzindo empresas, líderes e comunidades em processos de transformação madura, artesanal, tecnológica, silenciosa e profundamente efetiva. E, afetiva!</p>",
-          "<p>Nosso trabalho integra gestão, inovação, cultura e educação voltados ao futuro. Acreditamos na força das organizações, sejam empresariais ou sociais, como instrumentos capazes de promover bem-estar, dignidade, pertencimento e resultados sustentáveis.</p>"
+                    "<p>Nosso trabalho integra gestão, inovação, cultura e educação voltados ao futuro. Acreditamos na força das organizações, sejam empresariais ou sociais, como instrumentos capazes de promover bem-estar, dignidade, pertencimento e resultados sustentáveis. Trabalhamos com empresas de diferentes portes e segmentos, conduzindo projetos que vão desde a estruturação de um novo negócio até processos complexos de facilities, expansão, sucessão e valuation. Ao longo dessa jornada, construímos uma abordagem única: análises precisas, visão sistêmica e respeito absoluto ao capital humano.</p>"
         ],
         buttonText: "Conheça mais"
       },
@@ -210,145 +210,145 @@ const translations = {
         title: "Resultados",
         items: [
           {
-            image: "img/Depoimentos/1.png",
+            image: "img/Depoimentos/sem-foto.jpg",
             text: "A atuação da ACT na coordenação do Curso de Administração foi marcada por organização, visão estratégica e forte compromisso com a qualidade acadêmica. A integração entre teoria e prática elevou o nível dos cursos, fortaleceu o corpo docente e trouxe maior alinhamento com as exigências do mercado profissional.",
             stars: 5,
             author: "<strong>Coordenação do Curso de Administração</strong><br>Faculdade Particular – Estado de Goiás"
           },
           {
-            image: "img/Depoimentos/2.png",
+            image: "img/Depoimentos/sem-foto.jpg",
             text: "Como professor e coordenador pedagógico no SENAC SP, a ACT demonstrou excelência didática, liderança educacional e profundo domínio da Administração contemporânea. Sua atuação contribuiu diretamente para a formação técnica e humana dos alunos, conectando educação, mercado e inovação.",
             stars: 5,
             author: "<strong>Professor e Coordenador Pedagógico</strong><br>SENAC São Paulo"
           },
           {
-            image: "img/Depoimentos/3.png",
+            image: "img/Depoimentos/sem-foto.jpg",
             text: "Na presidência da Associação de Moradores do Parati, a ACT conduziu uma gestão responsável, transparente e orientada a resultados. Destacam-se as melhorias em infraestrutura, segurança, valorização imobiliária e a expressiva economia orçamentária após auditorias e renegociações estratégicas, além do fortalecimento institucional junto à sociedade.",
             stars: 5,
             author: "<strong>Presidente Gestor Agnaldo T. / Conselho Fiscal</strong><br>Associação de Moradores do Parati"
           },
           {
-            image: "img/Depoimentos/4.png",
+            image: "img/Depoimentos/sem-foto.jpg",
             text: "A palestra ‘Desafios da Gestão Moderna’, ministrada pela ACT na FACIG, foi amplamente reconhecida pela clareza, conteúdo atual e aplicabilidade prática. A abordagem provocativa e acessível despertou reflexões profundas sobre liderança, inovação e tomada de decisão nas organizações contemporâneas.",
             stars: 5,
             author: "<strong>Palestrante</strong><br>Tema: Desafios da Gestão Moderna – FACIG"
           },
           {
-            image: "img/Depoimentos/5.png",
+            image: "img/Depoimentos/sem-foto.jpg",
             text: "O Gestor Alexandre, teve um papel fundamental na integração dos colaboradores da ASSESI, criando e conduzindo ações inovadoras como gincanas, jogos e intervenções culturais. O trabalho fortaleceu o espírito de equipe, melhorou o clima organizacional e promoveu engajamento entre áreas diversas da instituição.",
             stars: 5,
             author: "<strong>Agente Colaborador em Integração de Equipes</strong><br>Associação ASSESI – São Paulo"
           },
           {
-            image: "img/Depoimentos/6.png",
+            image: "img/Depoimentos/sem-foto.jpg",
             text: "O suporte técnico prestado pela ACT à Solução Consultoria & Planejamento, destacou-se pela visão sistêmica e domínio das operações de turismo e hotelaria. As contribuições em hospedagem, alimentação, circuitos turísticos, gestão e recrutamento elevaram o padrão dos projetos atendidos.",
             stars: 5,
             author: "<strong>Suporte Técnico de Alta Performance</strong><br>Turismo e Hotelaria – Solução Consultoria & Planejamento (SP)"
           },
           {
-            image: "img/Depoimentos/7.png",
+            image: "img/Depoimentos/sem-foto.jpg",
             text: "A atuação da ACT junto ao Grupo Augustus agregou rigor técnico, sensibilidade operacional e foco em resultados. Seu apoio em gestão, hospitalidade, formação de equipes e processos internos contribuiu para maior eficiência, padronização e qualidade nos serviços prestados pelo grupo.",
             stars: 5,
             author: "<strong>Consultoria e Suporte Técnico</strong><br>Grupo Augustus"
           },
           {
-            image: "img/Depoimentos/8.png",
+            image: "img/Depoimentos/sem-foto.jpg",
             text: "O trabalho desenvolvido pelo Gestor Alexandre no Grupo Flamboyant, foi decisivo para a organização dos processos operacionais e administrativos. Com uma abordagem prática e humanizada, a consultoria impactou positivamente a performance das equipes, a experiência dos hóspedes e os resultados do negócio.",
             stars: 5,
             author: "<strong>Consultoria em Hotelaria e Serviços</strong><br>Flamboyant MG"
           },
           {
-            image: "img/Depoimentos/9.png",
+            image: "img/Depoimentos/sem-foto.jpg",
             text: "O poder público de São Carlos reconhece a relevante contribuição do fundador da ACT por meio de artigos e produções publicadas ao longo dos anos. Seus textos abordaram temas atuais do universo empresarial, comportamento e cultura, rendendo prêmios em concursos jornalísticos, culturais e empresariais.",
             stars: 5,
             author: "<strong>Reconhecimento do Poder Público</strong><br>São Carlos – SP"
           },
           {
-            image: "img/Depoimentos/10.png",
+            image: "img/Depoimentos/sem-foto.jpg",
             text: "A consultoria em gestão realizada pela ACT foi determinante para a evolução da VS Indústria. Os resultados incluíram aumento de receitas, redução de despesas, melhoria nos processos de contratação e maior harmonia na gestão familiar, trazendo clareza estratégica e segurança para o crescimento do negócio.",
             stars: 5,
             author: "<strong>Consultoria em Gestão Geral</strong><br>VS Indústria"
           },
           {
-            image: "img/Depoimentos/11.png",
+            image: "img/Depoimentos/sem-foto.jpg",
             text: "Alexandre é um profissional muito experiente na gestão de negócios, com um diferencial em Empresas Familiares... Muito assertivo. Gerou importantes resultados financeiros para nossa empresa....",
             stars: 5,
             author: "<strong>FERNANDO G. (CEO)Tecnologia e Hotelaria</strong>"
           },
           {
-            image: "img/Depoimentos/12.png",
+            image: "img/Depoimentos/sem-foto.jpg",
             text: "A ACT Consultoria, nos apoiou tecnicamente com sucesso nas questões operacionais, financeiras e administrativas... O Consultor Alexandre é persistente, quando se trata de encontrar resultados positivos para seus clientes.",
             stars: 5,
             author: "<strong>ERICK O. (Diretor Comercial)Construção Civil</strong>"
           },
           {
-            image: "img/Depoimentos/13.png",
+            image: "img/Depoimentos/sem-foto.jpg",
             text: "Alexandre é um Profissional capacitado, de alta integridade e com ótimos resultados.",
             stars: 5,
             author: "<strong>RENATO C.R (DIRETOR COMERCIAL)COROAVES</strong>"
           },
           {
-            image: "img/Depoimentos/14.png",
+            image: "img/Depoimentos/sem-foto.jpg",
             text: "O Administrador Alexandre, é um Consultor experiente em Valuation para Pequenas Empresas Familiares. Organizou gerencialmente nossa Empresa e fez a captação de um comprador/investidor, dentro das expectativas que esperávamos.",
             stars: 5,
             author: "<strong>Thomas T.S. (Sócio Proprietário) Segmento_Alimentos & Bebidas</strong>"
           },
           {
-            image: "img/Depoimentos/15.png",
+            image: "img/Depoimentos/sem-foto.jpg",
             text: "A Consultoria de Gerenciamento de Pequena Indústria, realizada pelo Escritório ACT Gestão de Resultados, nos protegeu claramente de riscos empresariais importantes e nos ajudou a repensar e reorganizar a Gestão de Pessoas, e; os setores Administrativo, Financeiro e Comercial, que estavam vulneráveis, evitando perdas e prejuízos no presente e no futuro para nossas empresas.",
             stars: 5,
             author: "<strong>Antônio S.M (Dir.Presidente) Alimentos Congelados</strong>"
           },
           {
-            image: "img/Depoimentos/16.png",
+            image: "img/Depoimentos/sem-foto.jpg",
             text: "O Escritório ACT, atendeu nossa empresa com total comprometimento, conseguindo com destreza diminuir vários de nossos custos e despesas operacionais, mantendo a qualidade dos trabalhos.",
             stars: 5,
             author: "<strong>Rosane T.R (Diretora Geral) Indústria Metalúrgica</strong>"
           },
           {
-            image: "img/Depoimentos/17.png",
+            image: "img/Depoimentos/sem-foto.jpg",
             text: "O Escritório ACT Gestão de Resultados, na pessoa do Consultor, senhor Alexandre, realizou um trabalho importante conosco, revelando novas possibilidades de crescimento sustentável e melhorando a visão estratégica de nossa empresa...",
             stars: 5,
             author: "<strong>Ademir C. (Dir.Presidente) Produtos de Limpeza</strong>"
           },
           {
-            image: "img/Depoimentos/18.png",
+            image: "img/Depoimentos/sem-foto.jpg",
             text: "Somos muito gratos ao Alexandre da ACT Administração, pois o escritório trabalhou o Valuation em nossa empresa, e empreendeu muitos esforços para as negociações otimizadas com terceiros, analisando sensivelmente as melhores possibilidades e sempre diminuindo o máximo de despesas fixas das nossas operações nesse período.",
             stars: 5,
             author: "<strong>Ronildo C.S.(Proprietário)PRODUÇÃO E VENDA - ALIMENTOS</strong>"
           },
           {
-            image: "img/Depoimentos/19.png",
+            image: "img/Depoimentos/sem-foto.jpg",
             text: "A ACT, nos proporcionou soluções técnicas nos Projetos necessários para nosso Condomínio, Leitura e Organização de Balancetes, Mediação de Conflitos, Pesquisa de Satisfação dos Moradores, Placas Informativas, Valorização dos Imóveis, Comunicação Interna entre Administração e Moradores, e organização do Lixo Reciclável. Deixamos nosso agradecimento.",
             stars: 5,
             author: "<strong>Vera A.S. (Administradora Síndica)Condomínio Residencial - (Interior SP)</strong>"
           },
           {
-            image: "img/Depoimentos/20.png",
+            image: "img/Depoimentos/sem-foto.jpg",
             text: "Conheci o Alexandre no treinamento EMPRETEC do SEBRAE... pude sentir que ele é um profissional dedicado aos seus clientes, procurando sempre as melhores práticas e melhores sugestões para organizar e otimizar os rendimentos nos negócios de seus clientes, sempre com olhar crítico e com posicionamento firme. Na Gestão Empresarial detem conhecimentos que auxiliam na alavancagem dos negócios.",
             stars: 5,
             author: "<strong>Marivaldo S. (OWNER)TECNOLOGIA ERP</strong>"
           },
           {
-            image: "img/Depoimentos/21.png",
+            image: "img/Depoimentos/sem-foto.jpg",
             text: "O Sr. Alexandre Tenório é um profissional aplicado e responsável, tendo desempenhado suas funções como Presidente da Associação/Síndico em nosso Residencial, por 3 anos, com muita seriedade. Realizou muitos benefícios ao condomínio, sempre mantendo a transparência em sua Administração.",
             stars: 5,
             author: "<strong>ROMUALDO B. (C.FISCAL E CONSULTOR SEGURANÇA)</strong><br>Associação RESIDENCIAL PARATY (interior SP)"
           },
           {
-            image: "img/Depoimentos/22.png",
+            image: "img/Depoimentos/sem-foto.jpg",
             text: "A ACT, na pessoa do Consultor e Educador Alexandre, desenvolveu conosco o projeto sociocultural “Dança Criança”, nos anos de 2017 e 2018, que teve como objetivo, através das aulas de Danças Sociais Brasileiras, com Musicalização de autores consagrados; provocar nos educandos, outras leituras culturais, novas perspectivas potenciais de horizontes para as crianças, agregando outras sonoridades nos cotidianos e influenciando no exercício da cidadania. Nosso Muito Obrigado!",
             stars: 5,
             author: "<strong>(Elaine H. Salesianos – Interior SP)</strong><br>Instituição de Projetos Sociais - Salesianos"
           },
           {
-            image: "img/Depoimentos/23.png",
+            image: "img/Depoimentos/sem-foto.jpg",
             text: "A ACT efetuou uma consultoria de qualidade, orientando como agir em momentos difíceis, prestando acessória na sustentabilidade do negócio, expondo situações de mercado e elaborando planos de ação variados para sobrevivência de minha empresa. Após um longo trabalho chegamos em uma alternativa de menor impacto financeiro onde os prejuízos foram minimizados. Eu recomendo 👍🏻",
             stars: 5,
             author: "<strong>Ricardo PROP. Empório Gourmet</strong>"
           },
           {
-            image: "img/Depoimentos/24.png",
+            image: "img/Depoimentos/sem-foto.jpg",
             text: "O Administrador Alexandre esteve nos assessorando durante um ano em diversas áreas da empresa. Nos auxiliou no desenvolvimento de processos administrativos, na redução de custos e no controle de gastos. Nos apresentou uma visão administrativa sólida que culminou na evolução dos processos na empresa seja no tocante a compras, controle de estoque, gestão de pessoas, gerenciamento e analise dos resultados.",
             stars: 5,
             author: "<strong>JARDINAGEM – Sócios / Luis e Tânia</strong>"
