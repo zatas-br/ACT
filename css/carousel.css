@@ -2,10 +2,11 @@
 .hero-carousel {
     position: relative;
     width: 100%;
-    /* Ensure the carousel + header (approx 95px) fits in the viewport */
-    max-height: calc(100vh - 95px);
+    /* Ensure the carousel + header fits in the viewport */
+    max-height: calc(100vh - var(--header-height, 95px));
     overflow: hidden;
     background-color: var(--primary-color);
+    padding: 0;
 }
 
 .hero-slides {
@@ -31,7 +32,7 @@
     width: auto;
     height: auto;
     max-width: 100%;
-    max-height: calc(100vh - 95px);
+    max-height: calc(100vh - var(--header-height, 95px));
     object-fit: contain;
     display: block;
 }
