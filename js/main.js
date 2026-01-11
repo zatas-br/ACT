@@ -490,7 +490,7 @@ function setupTestimonials(itemsData) {
 
     itemsData.forEach(data => {
         const card = document.createElement('div');
-        card.className = 'testimonial-card fade-up';
+        card.className = 'testimonial-card';
 
         const maxChars = 140;
         let displayText = data.text;

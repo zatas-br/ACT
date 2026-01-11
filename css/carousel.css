@@ -2,26 +2,38 @@
 .hero-carousel {
     position: relative;
     width: 100%;
-    height: 60vh;
-    min-height: 400px;
+    /* Ensure the carousel + header (approx 95px) fits in the viewport */
+    max-height: calc(100vh - 95px);
     overflow: hidden;
+    background-color: var(--primary-color);
 }
 
 .hero-slides {
     display: flex;
-    height: 100%;
     transition: transform 0.5s ease-in-out;
 }
 
 .hero-slide {
     min-width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.hero-slide picture {
+    display: flex;
+    justify-content: center;
+    width: 100%;
     height: 100%;
 }
 
 .hero-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: calc(100vh - 95px);
+    object-fit: contain;
+    display: block;
 }
 
 .carousel-btn {
@@ -172,7 +184,5 @@
 .testi-next { right: 0; }
 
 @media (max-width: 768px) {
-    .hero-carousel {
-        height: 50vh;
-    }
+    /* Height removal for responsiveness */
 }
