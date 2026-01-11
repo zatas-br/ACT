@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setupSmoothScroll();
     handlePageLoader();
     setupModal();
-    setupLanguageToggle();
     setupScrollAnimation();
     updateHeaderHeight();
     window.addEventListener('resize', updateHeaderHeight);
@@ -48,16 +47,6 @@ function setupScrollAnimation() {
     window.observeScrollElements();
 }
 
-function setupLanguageToggle() {
-    const toggleBtn = document.getElementById('lang-toggle');
-    if (toggleBtn) {
-        toggleBtn.addEventListener('click', () => {
-            currentLang = currentLang === 'pt' ? 'en' : 'pt';
-            toggleBtn.innerText = currentLang === 'pt' ? 'EN' : 'PT'; // Show option to switch TO
-            loadContent(currentLang);
-        });
-    }
-}
 
 // Expose switchLanguage for potential inline usage if needed
 window.switchLanguage = function(lang) {

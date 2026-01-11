@@ -133,7 +133,7 @@ const translations = {
         paragraphs: [
           "Desde 2009, a ACT vem construindo uma trajetória que une gestão, cultura, inovação e desenvolvimento humano — sempre com um olhar cuidadoso sobre a realidade de cada organização. Nasceu estruturando consultorias em hotelaria e serviços, e logo evoluiu para um trabalho profundo com empresas familiares, organizações do terceiro setor e negócios que buscavam clareza, organização e futuro.",
           "Desde o nascimento oficial, a ACT ampliou sua presença no universo das empresas familiares, apoiando processos de governança, sucessão e profissionalização — áreas sensíveis onde técnica e sensibilidade caminham lado a lado. Na última década, com total atração pela criatividade, vem mergulhando no ecossistema de inovação, participando e mentorando startup weekends, hackathons e programas junto ao INPI e FAPESP, fortalecendo sua base metodológica e expandindo repertórios de modelos de negócios.",
-          "Algumas vivências internacionais com trânsito por países como México, Estados Unidos, Argentina, Espanha, França, Uruguai e Portugal, reforçaram a visão global da ACT sobre gestão, cultura e inovação, alimentando essas expertises aplicadas à realidade brasileira de forma prática e contemporânea, sempre integrando temas emergentes como ESG, Agenda 2030, inteligência estratégica, IA e novas economias.",
+          "Algumas vivências internacionais com trânsito por países como México, Estados Unidos, Argentina, Espanha, França, Uruguai e Portugal reforçaram a visão global da ACT sobre gestão, cultura e inovação, alimentando essas expertises aplicadas à realidade brasileira de forma prática e contemporânea, sempre integrando temas emergentes como ESG, Agenda 2030, inteligência estratégica, IA e novas economias.",
           "Ao longo dessa jornada, a ACT já apoiou:",
           "<ul style='list-style: none; padding-left: 0;'><li style='margin-bottom: 1rem;'><strong>Pequenas e médias empresas</strong><br>Atendendo desde operações enxutas até estruturas com mais de 600 colaboradores, conduzindo diagnósticos, reestruturações, processos de liderança, eficiência operacional e estratégias de crescimento sustentável.</li><li style='margin-bottom: 1rem;'><strong>Startups e ecossistemas de inovação</strong><br>Atuação ativa em mentorias, validação de modelos de negócio e dinâmica de desenvolvimento rápido, conectando visão estratégica com execução simples e eficaz.</li><li style='margin-bottom: 1rem;'><strong>Projetos de inovação tecnológica</strong><br>Experiências junto ao INPI, FAPESP, SENAC, SEBRAE e outros ecossistemas, lidando com documentação técnica, coordenação de projetos, planejamento e gestão organizacional.</li><li style='margin-bottom: 1rem;'><strong>Formação corporativa e liderança</strong><br>Palestras, cursos e workshops — sempre focados em gestão contemporânea, comportamento organizacional, empreendedorismo, ESG, Agenda 2030 e temas emergentes de impacto direto no dia a dia das empresas.</li><li style='margin-bottom: 1rem;'><strong>Gestão condominial e associativa</strong><br>Apoio a condomínios e associações, considerando estruturação legal, como síndica profissional, treinamento para síndicos e Presidentes de Associações, com base no Código Civil, Convenções, Estatutos, Regimentos Internos, priorizando governança, convivência, sustentabilidade comunitária e tomada de decisão responsável, sempre valorizando imóveis, espaços e propósitos.</li><li style='margin-bottom: 1rem;'><strong>Terceiro setor e impacto social</strong><br>Projeto, estruturação e desenvolvimento de organizações filantrópicas, culturais e sociais, implementando métodos administrativos acessíveis e eficientes, conforme cada objetivo.</li><li style='margin-bottom: 1rem;'><strong>Projetos socioculturais</strong><br>Criação e execução de iniciativas que unem arte, educação e cidadania, envolvendo dança, música, literatura, teatro e experiências comunitárias transformadoras.</li></ul>",
           "A ACT se posiciona hoje como uma consultoria artesanal e ao mesmo tempo contemporânea, unindo organização, disciplina, criatividade, cultura, educação, empreendedorismo e visão de futuro. Uma estrutura que valoriza o que cada organização é — e o que ela pode se tornar — com atitude, comprometimento e técnica, que é a essência do seu Fundador e Administrador, Alexandre Tenorio."
@@ -235,13 +235,13 @@ const translations = {
           },
           {
             image: "img/Depoimentos/sem-foto.jpg",
-            text: "O Gestor Alexandre, teve um papel fundamental na integração dos colaboradores da ASSESI, criando e conduzindo ações inovadoras como gincanas, jogos e intervenções culturais. O trabalho fortaleceu o espírito de equipe, melhorou o clima organizacional e promoveu engajamento entre áreas diversas da instituição.",
+            text: "O Gestor Alexandre teve um papel fundamental na integração dos colaboradores da ASSESI, criando e conduzindo ações inovadoras como gincanas, jogos e intervenções culturais. O trabalho fortaleceu o espírito de equipe, melhorou o clima organizacional e promoveu engajamento entre áreas diversas da instituição.",
             stars: 5,
             author: "<strong>Agente Colaborador em Integração de Equipes</strong><br>Associação ASSESI – São Paulo"
           },
           {
             image: "img/Depoimentos/sem-foto.jpg",
-            text: "O suporte técnico prestado pela ACT à Solução Consultoria & Planejamento, destacou-se pela visão sistêmica e domínio das operações de turismo e hotelaria. As contribuições em hospedagem, alimentação, circuitos turísticos, gestão e recrutamento elevaram o padrão dos projetos atendidos.",
+            text: "O suporte técnico prestado pela ACT à Solução Consultoria & Planejamento destacou-se pela visão sistêmica e domínio das operações de turismo e hotelaria. As contribuições em hospedagem, alimentação, circuitos turísticos, gestão e recrutamento elevaram o padrão dos projetos atendidos.",
             stars: 5,
             author: "<strong>Suporte Técnico de Alta Performance</strong><br>Turismo e Hotelaria – Solução Consultoria & Planejamento (SP)"
           },
@@ -253,7 +253,7 @@ const translations = {
           },
           {
             image: "img/Depoimentos/sem-foto.jpg",
-            text: "O trabalho desenvolvido pelo Gestor Alexandre no Grupo Flamboyant, foi decisivo para a organização dos processos operacionais e administrativos. Com uma abordagem prática e humanizada, a consultoria impactou positivamente a performance das equipes, a experiência dos hóspedes e os resultados do negócio.",
+            text: "O trabalho desenvolvido pelo Gestor Alexandre no Grupo Flamboyant foi decisivo para a organização dos processos operacionais e administrativos. Com uma abordagem prática e humanizada, a consultoria impactou positivamente a performance das equipes, a experiência dos hóspedes e os resultados do negócio.",
             stars: 5,
             author: "<strong>Consultoria em Hotelaria e Serviços</strong><br>Flamboyant MG"
           },
@@ -273,35 +273,35 @@ const translations = {
             image: "img/Depoimentos/sem-foto.jpg",
             text: "Alexandre é um profissional muito experiente na gestão de negócios, com um diferencial em Empresas Familiares... Muito assertivo. Gerou importantes resultados financeiros para nossa empresa....",
             stars: 5,
-            author: "<strong>FERNANDO G. (CEO)Tecnologia e Hotelaria</strong>"
+            author: "<strong>FERNANDO G. (CEO) Tecnologia e Hotelaria</strong>"
           },
           {
             image: "img/Depoimentos/sem-foto.jpg",
             text: "A ACT Consultoria, nos apoiou tecnicamente com sucesso nas questões operacionais, financeiras e administrativas... O Consultor Alexandre é persistente, quando se trata de encontrar resultados positivos para seus clientes.",
             stars: 5,
-            author: "<strong>ERICK O. (Diretor Comercial)Construção Civil</strong>"
+            author: "<strong>ERICK O. (Diretor Comercial) Construção Civil</strong>"
           },
           {
             image: "img/Depoimentos/sem-foto.jpg",
             text: "Alexandre é um Profissional capacitado, de alta integridade e com ótimos resultados.",
             stars: 5,
-            author: "<strong>RENATO C.R (DIRETOR COMERCIAL)COROAVES</strong>"
+            author: "<strong>RENATO C.R (DIRETOR COMERCIAL) COROAVES</strong>"
           },
           {
             image: "img/Depoimentos/sem-foto.jpg",
-            text: "O Administrador Alexandre, é um Consultor experiente em Valuation para Pequenas Empresas Familiares. Organizou gerencialmente nossa Empresa e fez a captação de um comprador/investidor, dentro das expectativas que esperávamos.",
+            text: "O Administrador Alexandre é um Consultor experiente em Valuation para Pequenas Empresas Familiares. Organizou gerencialmente nossa Empresa e fez a captação de um comprador/investidor, dentro das expectativas que esperávamos.",
             stars: 5,
             author: "<strong>Thomas T.S. (Sócio Proprietário) Segmento_Alimentos & Bebidas</strong>"
           },
           {
             image: "img/Depoimentos/sem-foto.jpg",
-            text: "A Consultoria de Gerenciamento de Pequena Indústria, realizada pelo Escritório ACT Gestão de Resultados, nos protegeu claramente de riscos empresariais importantes e nos ajudou a repensar e reorganizar a Gestão de Pessoas, e; os setores Administrativo, Financeiro e Comercial, que estavam vulneráveis, evitando perdas e prejuízos no presente e no futuro para nossas empresas.",
+            text: "A Consultoria de Gerenciamento de Pequena Indústria realizada pelo Escritório ACT Gestão de Resultados nos protegeu claramente de riscos empresariais importantes e nos ajudou a repensar e reorganizar a Gestão de Pessoas, e; os setores Administrativo, Financeiro e Comercial, que estavam vulneráveis, evitando perdas e prejuízos no presente e no futuro para nossas empresas.",
             stars: 5,
             author: "<strong>Antônio S.M (Dir.Presidente) Alimentos Congelados</strong>"
           },
           {
             image: "img/Depoimentos/sem-foto.jpg",
-            text: "O Escritório ACT, atendeu nossa empresa com total comprometimento, conseguindo com destreza diminuir vários de nossos custos e despesas operacionais, mantendo a qualidade dos trabalhos.",
+            text: "O Escritório ACT atendeu nossa empresa com total comprometimento, conseguindo com destreza diminuir vários de nossos custos e despesas operacionais, mantendo a qualidade dos trabalhos.",
             stars: 5,
             author: "<strong>Rosane T.R (Diretora Geral) Indústria Metalúrgica</strong>"
           },
@@ -319,13 +319,13 @@ const translations = {
           },
           {
             image: "img/Depoimentos/sem-foto.jpg",
-            text: "A ACT, nos proporcionou soluções técnicas nos Projetos necessários para nosso Condomínio, Leitura e Organização de Balancetes, Mediação de Conflitos, Pesquisa de Satisfação dos Moradores, Placas Informativas, Valorização dos Imóveis, Comunicação Interna entre Administração e Moradores, e organização do Lixo Reciclável. Deixamos nosso agradecimento.",
+            text: "A ACT nos proporcionou soluções técnicas nos Projetos necessários para nosso Condomínio, Leitura e Organização de Balancetes, Mediação de Conflitos, Pesquisa de Satisfação dos Moradores, Placas Informativas, Valorização dos Imóveis, Comunicação Interna entre Administração e Moradores, e organização do Lixo Reciclável. Deixamos nosso agradecimento.",
             stars: 5,
             author: "<strong>Vera A.S. (Administradora Síndica)Condomínio Residencial - (Interior SP)</strong>"
           },
           {
             image: "img/Depoimentos/sem-foto.jpg",
-            text: "Conheci o Alexandre no treinamento EMPRETEC do SEBRAE... pude sentir que ele é um profissional dedicado aos seus clientes, procurando sempre as melhores práticas e melhores sugestões para organizar e otimizar os rendimentos nos negócios de seus clientes, sempre com olhar crítico e com posicionamento firme. Na Gestão Empresarial detem conhecimentos que auxiliam na alavancagem dos negócios.",
+            text: "Conheci o Alexandre no treinamento EMPRETEC do SEBRAE... pude sentir que ele é um profissional dedicado aos seus clientes, procurando sempre as melhores práticas e melhores sugestões para organizar e otimizar os rendimentos nos negócios de seus clientes, sempre com olhar crítico e com posicionamento firme. Na Gestão Empresarial detém conhecimentos que auxiliam na alavancagem dos negócios.",
             stars: 5,
             author: "<strong>Marivaldo S. (OWNER)TECNOLOGIA ERP</strong>"
           },
@@ -343,13 +343,13 @@ const translations = {
           },
           {
             image: "img/Depoimentos/sem-foto.jpg",
-            text: "A ACT efetuou uma consultoria de qualidade, orientando como agir em momentos difíceis, prestando acessória na sustentabilidade do negócio, expondo situações de mercado e elaborando planos de ação variados para sobrevivência de minha empresa. Após um longo trabalho chegamos em uma alternativa de menor impacto financeiro onde os prejuízos foram minimizados. Eu recomendo 👍🏻",
+            text: "A ACT efetuou uma consultoria de qualidade, orientando como agir em momentos difíceis, prestando assessoria na sustentabilidade do negócio, expondo situações de mercado e elaborando planos de ação variados para sobrevivência de minha empresa. Após um longo trabalho chegamos em uma alternativa de menor impacto financeiro onde os prejuízos foram minimizados. Eu recomendo 👍🏻",
             stars: 5,
             author: "<strong>Ricardo PROP. Empório Gourmet</strong>"
           },
           {
             image: "img/Depoimentos/sem-foto.jpg",
-            text: "O Administrador Alexandre esteve nos assessorando durante um ano em diversas áreas da empresa. Nos auxiliou no desenvolvimento de processos administrativos, na redução de custos e no controle de gastos. Nos apresentou uma visão administrativa sólida que culminou na evolução dos processos na empresa seja no tocante a compras, controle de estoque, gestão de pessoas, gerenciamento e analise dos resultados.",
+            text: "O Administrador Alexandre esteve nos assessorando durante um ano em diversas áreas da empresa. Nos auxiliou no desenvolvimento de processos administrativos, na redução de custos e no controle de gastos. Nos apresentou uma visão administrativa sólida que culminou na evolução dos processos na empresa seja no tocante a compras, controle de estoque, gestão de pessoas, gerenciamento e análise dos resultados.",
             stars: 5,
             author: "<strong>JARDINAGEM – Sócios / Luis e Tânia</strong>"
           }
@@ -418,6 +418,3 @@ const translations = {
     // English content will be added here
   }
 };
-
-// Copy PT content to EN for now to prevent errors and show structure
-translations.en = JSON.parse(JSON.stringify(translations.pt));
