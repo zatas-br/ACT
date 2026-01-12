@@ -367,17 +367,17 @@ const translations = {
           "<p>Indústrias – Varejos – Serviços – Organizações & Instituições Diversas</p>",
           "<h3 style='margin-top: 1.5rem; color: var(--secondary-color);'>EXPERTISES</h3>",
           "<p>Plano de Negócios – Plano de Expansão – Valuation</p>",
-          "<h4 style='margin-top: 1rem; color: #fff;'>1️- Plano de Negócios</h4>",
-          "<p style='margin-bottom: 0.5rem;'><strong>(Tirando a ideia da cabeça e do papel)</strong><br>A ACT transforma ideias em negócios viáveis. Estrutura o plano de negócios desde a concepção até a operação inicial, analisando investimentos, retornos, localização, obras, equipes, regras internas, missão, perfil dos fundadores, sócios, investidores e fontes de capital.</p>",
-          "<h4 style='margin-top: 1rem; color: #fff;'>2- Organização & Expansão</h4>",
+          "<h4 style='margin-top: 1rem; color: #fff;'>Plano de Negócios</h4>",
+          "<p style='margin-bottom: 0.5rem;'>A ACT transforma ideias em negócios viáveis. Estrutura o plano de negócios desde a concepção até a operação inicial, analisando investimentos, retornos, localização, obras, equipes, regras internas, missão, perfil dos fundadores, sócios, investidores e fontes de capital.</p>",
+          "<h4 style='margin-top: 1rem; color: #fff;'>Organização & Expansão</h4>",
           "<p style='margin-bottom: 0.5rem;'>Quando o negócio já existe, mas cresce sem controle, com muitas dúvidas sobre o resultado real da Empresa. A ACT profissionaliza a gestão “familiar”, sem deixar se perder a essência estrutural. Implanta processos, governança, orçamento, indicadores, facilities, preparação para sucessão familiar, modelo de expansão (inclusive franquias), e eleva a performance da Organização para crescer com segurança e atratividade ao capital.</p>",
-          "<h4 style='margin-top: 1rem; color: #fff;'>3- Valuation & Futuro (Maturidade)</h4>",
+          "<h4 style='margin-top: 1rem; color: #fff;'>Valuation & Futuro</h4>",
           "<p style='margin-bottom: 0.5rem;'>A ACT revela o valor real da empresa, o que é fundamental para decisões estratégicas: venda parcial ou total, entrada de investidores, planejamento sucessório ou valorização do negócio antes da negociação. O valuation vira ferramenta de escolha, não apenas de preço.</p>",
           "<h3 style='margin-top: 1.5rem; color: var(--secondary-color);'>PILARES</h3>",
           "<ul style='list-style: none; padding-left: 0;'><li><strong>ORGANIZAR</strong> - Entender onde a empresa está e onde quer chegar, determinando ações com clareza técnica e humanizada.</li><li><strong>DESENVOLVER</strong> – Desenvolver pessoas, fortalecendo o capital humano alimentando o engajamento, desenvolver mercados, processos, cultura e tecnologias.</li><li><strong>EXPANDIR</strong> – Visualizar, avaliar e trabalhar cenários de mercado passíveis para a expansão. Consolidar modelos de crescimento seguros, lucrativos e alinhados ao propósito dos fundadores e seus stakeholder(s).</li></ul>",
           "<p style='margin-top: 1rem;'>Nosso compromisso é ajudar organizações a evoluírem com consciência, estratégia e profundidade — sem perderem suas essências, seus valores e suas histórias.</p>",
           "<h3 style='margin-top: 1.5rem; color: var(--secondary-color);'>PROPÓSITOS EMPRESARIAIS</h3>",
-          "<ul style='list-style: none; padding-left: 0;'><li>(1) ampliar receitas com inteligência estratégica,</li><li>(2) reduzir despesas sem comprometer a qualidade,</li><li>(3) entender a diferença de despesas, custos e investimentos, direcionando tudo com consciência de uma organização vencedora!</li><li>(4) proteger o patrimônio adquirido, construído com mérito e visão de longo prazo.</li></ul>"
+          "<ul style='list-style: none; padding-left: 0;'><li><span class='purpose-item'>Ampliar receitas com inteligência estratégica,</span></li><li><span class='purpose-item'>Reduzir despesas sem comprometer a qualidade,</span></li><li><span class='purpose-item'>Entender a diferença de despesas, custos e investimentos, direcionando tudo com consciência de uma organização vencedora!</span></li><li><span class='purpose-item'>Proteger o patrimônio adquirido, construído com mérito e visão de longo prazo.</span></li></ul>"
         ]
       },
       alexandre: {

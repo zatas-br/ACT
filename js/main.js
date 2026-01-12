@@ -453,22 +453,21 @@ function setupHeroCarousel() {
     const prevBtn = document.getElementById('hero-prev');
     const nextBtn = document.getElementById('hero-next');
 
-    prevBtn.onclick = () => {
+    const slidePrev = () => {
+        index = (index - 1 + total) % total;
+        update();
+    };
+
+    const slideNext = () => {
         index = (index + 1) % total;
         update();
     };
 
-    nextBtn.onclick = () => {
-        index = (index - 1 + total) % total;
-        update();
-    };
+    prevBtn.onclick = slidePrev;
+    nextBtn.onclick = slideNext;
 
-    // Clear existing interval if restarting?
     if (window.heroInterval) clearInterval(window.heroInterval);
-    window.heroInterval = setInterval(() => {
-        index = (index - 1 + total) % total;
-        update();
-    }, 5000);
+    window.heroInterval = setInterval(slidePrev, 5000);
 }
 
 // Store interval globally to clear it on language switch re-render

@@ -8,3 +8,8 @@
 @import 'testimonials_img.css';
 @import 'footer.css';
 @import 'loader.css';
+
+.purpose-item {
+    color: #D4AF37;
+    font-size: 1.1em;
+}
