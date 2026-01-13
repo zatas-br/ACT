@@ -22,7 +22,7 @@ const translations = {
         title: "Serviços",
         items: [
           {
-            image: "img/servicos/5.png",
+            image: "img/servicos/2.png",
             title: "1. Empreender & Inovar",
             shortDescription: "A ACT atua diretamente e apoia empreendedores que desejam transformar ideias em negócios sólidos e competitivos.",
             description: "A ACT atua diretamente e apoia empreendedores que desejam transformar ideias em negócios sólidos e competitivos. Atuamos com:",
@@ -37,7 +37,7 @@ const translations = {
             footer: "Trabalhamos para transformar criatividade em estratégia, tecnologia em eficiência e ideias em resultados reais."
           },
           {
-            image: "img/servicos/1.png",
+            image: "img/servicos/7.png",
             title: "2. Empresas Familiares",
             shortDescription: "A ACT é especialista em governança e evolução de negócios familiares, com foco em organização de papéis e sucessão.",
             description: "A ACT é especialista em governança e evolução de negócios familiares, com foco em:",
@@ -52,7 +52,7 @@ const translations = {
             footer: "Nosso trabalho reúne técnica e sensibilidade para apoiar famílias que desejam construir legado com paz, clareza e profissionalismo."
           },
           {
-            image: "img/servicos/2.png",
+            image: "img/servicos/1.png",
             title: "3. Indústrias & Varejos",
             shortDescription: "Para indústrias e varejos que precisam se adaptar ao mercado contemporâneo, a ACT oferece reposicionamento e eficiência.",
             description: "Para indústrias e varejos que precisam se adaptar ao mercado contemporâneo, a ACT oferece:",
@@ -67,7 +67,7 @@ const translations = {
             footer: "Nosso foco é construir operações mais competitivas, ágeis e sustentáveis, com base em dados, inovação e clareza estratégica."
           },
           {
-            image: "img/servicos/3.png",
+            image: "img/servicos/5.png",
             title: "4. Hotéis & Restaurantes",
             shortDescription: "A ACT oferece consultoria completa para negócios de hospitalidade que precisam elevar sua performance e experiência do cliente.",
             description: "A ACT oferece consultoria completa para negócios de hospitalidade que precisam elevar sua performance, eficiência e experiência do cliente. Atuamos em:",
@@ -95,7 +95,7 @@ const translations = {
             footer: "Toda empresa tem um valor — nós ajudamos a revelá-lo."
           },
           {
-            image: "img/servicos/7.png",
+            image: "img/servicos/3.png",
             title: "6. Condomínios & Associações",
             shortDescription: "A ACT atua como gestora ou consultora na administração e facilities de condomínios, residenciais e hospitalidades diversas.",
             description: "Com experiência acumulada ao longo de mais de uma década, a ACT atua como gestora ou consultora na administração e facilities de condomínios, residenciais e hospitalidades diversas.<br>Oferecemos:",
@@ -192,7 +192,7 @@ const translations = {
           },
           { 
             image: "img/expertises/6.png", 
-            title: "ORGANIZAÇÕES & OUTRAS INSTITUIÇÕES", 
+            title: "INSTITUIÇÕES", 
             description: "A ACT atua no fortalecimento organizacional de instituições públicas, privadas e do terceiro setor, apoiando estruturas que lidam com múltiplos interesses, responsabilidades sociais e necessidade de transparência, governança e continuidade institucional.<br><br>Nosso trabalho envolve organização administrativa, financeira e operacional, definição de papéis, revisão de processos decisórios, apoio à governança, formação de lideranças e adequação às normas legais e regulatórias. Atuamos para transformar boas intenções em instituições organizadas, eficientes e confiáveis.<br><br>A ACT já desenvolveu projetos e entregou resultados em diferentes tipos de organizações e instituições, incluindo:", 
             list: [
               "Instituições de Ensino;",
@@ -382,7 +382,25 @@ const translations = {
       },
       alexandre: {
         title: "Formação e vivências que orientam nossa visão",
-        content: "A ACT é conduzida por um administrador <strong>(Alexandre Tenorio)</strong>, formado e pós-graduado pela Escola Senac São Paulo, onde também, além de outras Instituições de Ensino, foi professor e coordenador de cursos de administração. Sua trajetória — junto à de parceiros especialistas — reúne cursos, congressos e ampla formação complementar em instituições nacionais e internacionais.<br><br>Sua atuação comprometida, inclui projetos autênticos, inovadores, mentorias em ecossistemas de inovação como startup weekend, hackathon, além de consultorias técnicas e gestão de organizações da indústria, varejo e serviços, sempre promovendo a integração entre tecnologia e comandos humanizados para impulsionar o crescimento empresarial e o desenvolvimento organizacional orientado a resultados, o que consolida uma visão multidisciplinar e contemporânea.<br><br>Essa base técnica se soma a princípios que trazem uma perspectiva real e futurista, que compreende as Organizações como espaços de convivência, criação e impacto positivo no bem-estar coletivo, e integram quatro propósitos técnicos empresariais essenciais na liderança das Organizações:<br>(1) ampliar receitas com inteligência estratégica,<br>(2) reduzir despesas sem comprometer a qualidade,<br>(3) direcionar investimentos de forma consciente e sustentável, e<br>(4) proteger o patrimônio construído com mérito e visão de longo prazo."
+        content: "A ACT é conduzida por um administrador <strong>(Alexandre Tenorio)</strong>, formado e pós-graduado pela Escola Senac São Paulo, onde também, além de outras Instituições de Ensino, foi professor e coordenador de cursos de administração. Sua trajetória — junto à de parceiros especialistas — reúne cursos, congressos e ampla formação complementar em instituições nacionais e internacionais.<br><br>Sua atuação comprometida, inclui projetos autênticos, inovadores, mentorias em ecossistemas de inovação como startup weekend, hackathon, além de consultorias técnicas e gestão de organizações da indústria, varejo e serviços, sempre promovendo a integração entre tecnologia e comandos humanizados para impulsionar o crescimento empresarial e o desenvolvimento organizacional orientado a resultados, o que consolida uma visão multidisciplinar e contemporânea.<br><br>Essa base técnica se soma a princípios que trazem uma perspectiva real e futurista, que compreende as Organizações como espaços de convivência, criação e impacto positivo no bem-estar coletivo, e integram quatro propósitos técnicos empresariais essenciais na liderança das Organizações:",
+        cards: [
+          {
+            text: "Ampliar receitas com inteligência estratégica",
+            icon: '<svg viewBox="0 0 24 24"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg>'
+          },
+          {
+            text: "Reduzir despesas sem comprometer a qualidade",
+            icon: '<svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>'
+          },
+          {
+            text: "Direcionar investimentos de forma consciente e sustentável",
+            icon: '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.51-3.49L17.5 6.5 9.99 9.99 6.5 17.5zm5.5-6.6c.61 0 1.1.49 1.1 1.1s-.49 1.1-1.1 1.1-1.1-.49-1.1-1.1.49-1.1 1.1-1.1z"/></svg>'
+          },
+          {
+            text: "Proteger o patrimônio construído com mérito e visão de longo prazo",
+            icon: '<svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>'
+          }
+        ]
       },
       mission: {
         missionTitle: "MISSÃO",
@@ -405,13 +423,12 @@ const translations = {
       title: "Contato",
       items: [
         { type: "link", icon: "img/png/Facebook.png", text: "Facebook", href: "https://www.facebook.com/ACT.Gestao.Arte.Tude" },
-        { type: "link", icon: "img/png/whatsapp.svg", text: "Whatsapp", href: "" },
-        { type: "text", icon: "img/png/Mail.png", text: "consultoria.act@gmail.com" }
+        { type: "link", icon: "img/png/whatsapp.svg", text: "Whatsapp", href: "https://wa.me/5511999999999" },
+        { type: "copy", icon: "img/png/Mail.png", text: "consultoria.act@gmail.com", value: "consultoria.act@gmail.com" }
       ]
     },
     footer: {
-      text: "©NathaliaCSd",
-      logo: "img/png/git.png"
+      text: "<a href='mailto:consultoria.act@gmail.com' style='color: inherit; text-decoration: none;'>ACT Partners & Development</a> | <a href='https://zatas.com.br/' target='_blank' style='color: inherit; text-decoration: none;'>Desenvolvido por Zatas</a>"
     }
   },
   en: {

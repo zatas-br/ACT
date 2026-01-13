@@ -139,11 +139,58 @@ function loadContent(lang) {
     }
 
     // --- Footer ---
-    const footerText = document.getElementById('footer-text');
-    if (footerText) footerText.innerText = content.footer.text;
-
     const footerLogo = document.getElementById('footer-logo');
-    if (footerLogo) footerLogo.src = content.footer.logo;
+    if (footerLogo) footerLogo.style.display = 'none';
+
+    const footerText = document.getElementById('footer-text');
+    if (footerText) footerText.innerHTML = content.footer.text;
+
+    // --- Contact (Shared) ---
+    const contactTitle = document.getElementById('contact-title');
+    if (contactTitle) contactTitle.innerText = content.contact.title;
+    
+    const contactContainer = document.getElementById('contact-container');
+    if (contactContainer) {
+        contactContainer.innerHTML = content.contact.items.map(item => {
+            if (item.type === 'link') {
+                return `
+                    <a href="${item.href}" class="contact-item" target="_blank">
+                        <img src="${item.icon}" alt="${item.text}" class="contact-icon">
+                        <span>${item.text}</span>
+                    </a>
+                `;
+            } else if (item.type === 'copy') {
+                return `
+                    <div class="contact-item contact-item-copy" data-value="${item.value}" style="cursor: pointer;">
+                        <img src="${item.icon}" alt="${item.text}" class="contact-icon">
+                        <span>${item.text}</span>
+                    </div>
+                `;
+            } else {
+                return `
+                    <div class="contact-item">
+                        <img src="${item.icon}" alt="${item.text}" class="contact-icon">
+                        <span>${item.text}</span>
+                    </div>
+                `;
+            }
+        }).join('');
+
+        // Attach event listeners for copy buttons
+        const copyItems = contactContainer.querySelectorAll('.contact-item-copy');
+        copyItems.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const value = btn.getAttribute('data-value');
+                if (value) {
+                    navigator.clipboard.writeText(value).then(() => {
+                        showToast('Email copiado com sucesso!');
+                    }).catch(err => {
+                        console.error('Failed to copy text: ', err);
+                    });
+                }
+            });
+        });
+    }
 
     // --- Home Specific ---
     if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname.endsWith('/')) {
@@ -251,31 +298,6 @@ function loadHomeContent(content) {
 
     // Re-setup testimonials carousel with new data
     setupTestimonials(home.testimonials.items);
-
-    // Contact
-    const contactTitle = document.getElementById('contact-title');
-    if (contactTitle) contactTitle.innerText = content.contact.title;
-    
-    const contactContainer = document.getElementById('contact-container');
-    if (contactContainer) {
-        contactContainer.innerHTML = content.contact.items.map(item => {
-            if (item.type === 'link') {
-                return `
-                    <a href="${item.href}" class="contact-item" target="_blank">
-                        <img src="${item.icon}" alt="${item.text}" class="contact-icon">
-                        <span>${item.text}</span>
-                    </a>
-                `;
-            } else {
-                return `
-                    <div class="contact-item">
-                        <img src="${item.icon}" alt="${item.text}" class="contact-icon">
-                        <span>${item.text}</span>
-                    </div>
-                `;
-            }
-        }).join('');
-    }
 }
 
 function loadAboutPageContent(content) {
@@ -291,7 +313,21 @@ function loadAboutPageContent(content) {
     if (alexTitle) alexTitle.innerText = about.alexandre.title;
     
     const alexContent = document.getElementById('alexandre-content');
-    if (alexContent) alexContent.innerHTML = `<p>${about.alexandre.content}</p>`;
+    if (alexContent) {
+        let html = `<p>${about.alexandre.content}</p>`;
+        
+        if (about.alexandre.cards && about.alexandre.cards.length > 0) {
+            const cardsHtml = about.alexandre.cards.map(card => `
+                <div class="alexandre-card">
+                    ${card.icon}
+                    <p>${card.text}</p>
+                </div>
+            `).join('');
+            html += `<div class="alexandre-grid">${cardsHtml}</div>`;
+        }
+        
+        alexContent.innerHTML = html;
+    }
 
     const mvvContainer = document.getElementById('mission-vision-values');
     if (mvvContainer) {
@@ -412,11 +448,43 @@ function renderStars(rating) {
     return `<span style="color: gold;">${fullStar.repeat(filled)}</span><span style="color: #ccc;">${emptyStar.repeat(empty)}</span>`;
 }
 
+function showToast(message) {
+    let toast = document.getElementById('toast-notification');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'toast-notification';
+        toast.className = 'toast-notification';
+        
+        // Optional icon
+        const icon = `<svg class="toast-icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>`;
+        
+        document.body.appendChild(toast);
+    }
+    
+    // Reset content with icon
+    toast.innerHTML = `<svg class="toast-icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span>${message}</span>`;
+    
+    // Trigger animation
+    setTimeout(() => {
+        toast.classList.add('show');
+    }, 10);
+
+    // Hide after 3 seconds
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 3000);
+}
+
 function closeModal() {
     const modalOverlay = document.getElementById('global-modal-overlay');
     if (modalOverlay) {
         modalOverlay.classList.remove('active');
-        document.body.style.overflow = '';
+        // Wait for transition to finish before restoring overflow
+        setTimeout(() => {
+            if (!modalOverlay.classList.contains('active')) {
+                document.body.style.overflow = '';
+            }
+        }, 300);
     }
 }
 
@@ -429,6 +497,7 @@ function setupHeroCarousel() {
         "img/Capas/5.png", "img/Capas/6.png", "img/Capas/7.png"
     ];
 
+    // 1. Generate Slides (Basic)
     const slidesHTML = images.map((img, index) => {
         const mobileImg = img.replace('Capas', 'Mobile');
         return `
@@ -442,32 +511,93 @@ function setupHeroCarousel() {
 
     track.innerHTML = slidesHTML;
 
-    let index = 0;
-    const slides = document.querySelectorAll('.hero-slide');
-    const total = slides.length;
+    // 2. Clone first and last slides for infinite loop
+    const originalSlides = Array.from(track.children);
+    const firstClone = originalSlides[0].cloneNode(true);
+    const lastClone = originalSlides[originalSlides.length - 1].cloneNode(true);
 
-    function update() {
-        track.style.transform = `translateX(-${index * 100}%)`;
+    track.appendChild(firstClone);
+    track.insertBefore(lastClone, track.firstChild);
+
+    // 3. State
+    let currentIndex = 1; // Start at first real slide (index 1 because of prepended clone)
+    const totalRealSlides = images.length;
+    let isTransitioning = false;
+
+    // 4. Initial Position
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    function updateTrack(enableTransition = true) {
+        if (enableTransition) {
+            track.style.transition = 'transform 0.5s ease-in-out';
+        } else {
+            track.style.transition = 'none';
+        }
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
-    
+
+    const slideNext = () => {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        currentIndex++;
+        updateTrack(true);
+    };
+
+    const slidePrev = () => {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        currentIndex--;
+        updateTrack(true);
+    };
+
+    // 5. Handle Transition End (Infinite Loop Jump)
+    track.addEventListener('transitionend', () => {
+        isTransitioning = false;
+        if (currentIndex === 0) {
+            // Jump to real last slide
+            currentIndex = totalRealSlides;
+            updateTrack(false);
+        } else if (currentIndex === totalRealSlides + 1) {
+            // Jump to real first slide
+            currentIndex = 1;
+            updateTrack(false);
+        }
+    });
+
+    // 6. Controls
     const prevBtn = document.getElementById('hero-prev');
     const nextBtn = document.getElementById('hero-next');
 
-    const slidePrev = () => {
-        index = (index - 1 + total) % total;
-        update();
-    };
+    // Remove old listeners if any by cloning (simple reset)
+    const newPrev = prevBtn.cloneNode(true);
+    const newNext = nextBtn.cloneNode(true);
+    prevBtn.parentNode.replaceChild(newPrev, prevBtn);
+    nextBtn.parentNode.replaceChild(newNext, nextBtn);
 
-    const slideNext = () => {
-        index = (index + 1) % total;
-        update();
-    };
+    newPrev.addEventListener('click', () => {
+        slidePrev();
+        resetAutoPlay();
+    });
 
-    prevBtn.onclick = slidePrev;
-    nextBtn.onclick = slideNext;
+    newNext.addEventListener('click', () => {
+        slideNext();
+        resetAutoPlay();
+    });
 
-    if (window.heroInterval) clearInterval(window.heroInterval);
-    window.heroInterval = setInterval(slidePrev, 5000);
+    // 7. Auto Play (Always move next for LTR effect if desired, or Prev for RTL)
+    // User asked for "same as testimonials", which moves left (slides go left),
+    // effectively showing the NEXT item on the right.
+    function startAutoPlay() {
+        if (window.heroInterval) clearInterval(window.heroInterval);
+        window.heroInterval = setInterval(slidePrev, 5000);
+    }
+
+    function resetAutoPlay() {
+        clearInterval(window.heroInterval);
+        startAutoPlay();
+    }
+
+    startAutoPlay();
 }
 
 // Store interval globally to clear it on language switch re-render
@@ -513,14 +643,24 @@ function setupTestimonials(itemsData) {
         `;
 
         card.style.cursor = 'pointer';
-        card.addEventListener('click', () => {
-            openModal(data);
-        });
+        // Assign index for event delegation
+        card.setAttribute('data-index', items.length);
 
         items.push(card);
     });
 
     if (items.length === 0) return;
+
+    // Event Delegation for clicks (handles clones too)
+    track.addEventListener('click', (e) => {
+        const card = e.target.closest('.testimonial-card');
+        if (card) {
+            const index = card.getAttribute('data-index');
+            if (index !== null && itemsData[index]) {
+                openModal(itemsData[index]);
+            }
+        }
+    });
 
     // 2. Clone items for infinite loop
     const itemsToClone = 3; // Ensure itemsData has at least 3 items for this logic to work smoothly
