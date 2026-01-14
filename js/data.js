@@ -424,11 +424,11 @@ const translations = {
       title: "Contato",
       items: [
         { type: "link", icon: "img/png/Facebook.png", text: "Facebook", href: "https://www.facebook.com/ACT.Gestao.Arte.Tude" },
-        { type: "link", icon: "img/png/Mail.png", text: "consultoria.act@gmail.com", href: "mailto:consultoria.act@gmail.com" }
+        { type: "link", icon: "img/png/Mail.png", text: "contato@actadm.com.br", href: "mailto:contato@actadm.com.br?subject=Contato através do Site" }
       ]
     },
     footer: {
-      text: "<a href='mailto:consultoria.act@gmail.com' style='color: inherit; text-decoration: none;'>ACT Partners & Development</a> | <a href='https://zatas.com.br/' target='_blank' style='color: inherit; text-decoration: none;'>Desenvolvido por Zatas</a>"
+      text: "<a href='mailto:contato@actadm.com.br?subject=Contato através do Site' style='color: inherit; text-decoration: none;'>ACT Partners & Development</a> | <a href='https://zatas.com.br/' target='_blank' style='color: inherit; text-decoration: none;'>Desenvolvido por Zatas</a>"
     }
   },
   en: {
