@@ -424,8 +424,7 @@ const translations = {
       title: "Contato",
       items: [
         { type: "link", icon: "img/png/Facebook.png", text: "Facebook", href: "https://www.facebook.com/ACT.Gestao.Arte.Tude" },
-        { type: "link", icon: "img/png/whatsapp.svg", text: "Whatsapp", href: "https://wa.me/5511999999999" },
-        { type: "copy", icon: "img/png/Mail.png", text: "consultoria.act@gmail.com", value: "consultoria.act@gmail.com" }
+        { type: "link", icon: "img/png/Mail.png", text: "consultoria.act@gmail.com", href: "mailto:consultoria.act@gmail.com" }
       ]
     },
     footer: {
