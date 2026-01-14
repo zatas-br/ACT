@@ -307,26 +307,37 @@ function loadAboutPageContent(content) {
     if (histTitle) histTitle.innerText = about.history.title;
     
     const histContent = document.getElementById('history-content');
-    if (histContent) histContent.innerHTML = about.history.content.join('');
+    if (histContent) {
+        let historyHtml = about.history.content.join('');
+        
+        if (about.history.cardsIntro) {
+            historyHtml += `<p class="transition-text" style="font-size: 1.1em; margin: 2.5rem 0 1.5rem;">${about.history.cardsIntro}</p>`;
+        }
+
+        if (about.history.cardsTitle) {
+            // Updated style to match "PILARES" (color: secondary, margin-top: 1.5rem) exactly
+            historyHtml += `<h3 style="margin-top: 1.5rem; color: var(--secondary-color);">${about.history.cardsTitle}</h3>`;
+        }
+
+        if (about.history.cards && about.history.cards.length > 0) {
+            const cardsHtml = about.history.cards.map(card => `
+                <div class="alexandre-card">
+                    ${card.icon}
+                    <p>${card.text}</p>
+                </div>
+            `).join('');
+            historyHtml += `<div class="alexandre-grid">${cardsHtml}</div>`;
+        }
+
+        histContent.innerHTML = historyHtml;
+    }
 
     const alexTitle = document.getElementById('alexandre-title');
     if (alexTitle) alexTitle.innerText = about.alexandre.title;
     
     const alexContent = document.getElementById('alexandre-content');
     if (alexContent) {
-        let html = `<p>${about.alexandre.content}</p>`;
-        
-        if (about.alexandre.cards && about.alexandre.cards.length > 0) {
-            const cardsHtml = about.alexandre.cards.map(card => `
-                <div class="alexandre-card">
-                    ${card.icon}
-                    <p>${card.text}</p>
-                </div>
-            `).join('');
-            html += `<div class="alexandre-grid">${cardsHtml}</div>`;
-        }
-        
-        alexContent.innerHTML = html;
+        alexContent.innerHTML = `<p>${about.alexandre.content}</p>`;
     }
 
     const mvvContainer = document.getElementById('mission-vision-values');

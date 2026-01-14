@@ -5,8 +5,9 @@ const translations = {
       links: [
         { text: "Home", href: "index.html" },
         { text: "Sobre", href: "about.html" },
-        { text: "Contato", href: "index.html#contato" },
-        { text: "Depoimentos", href: "index.html#resultados" }
+        { text: "Serviços", href: "index.html#servicos" },
+        { text: "Depoimentos", href: "index.html#resultados" },
+        { text: "Contato", href: "index.html#contato" }
       ]
     },
     home: {
@@ -174,7 +175,7 @@ const translations = {
           { 
             image: "img/expertises/3.png", 
             title: "SERVIÇOS", 
-            description: "A ACT atua na organização e profissionalização de empresas prestadoras de serviços, apoiando negócios que dependem diretamente de pessoas, processos bem definidos e controle rigoroso da operação. Nosso trabalho transforma rotinas informais em estruturas claras, eficientes e sustentáveis.<br><br>Atuamos desde a definição de regras internas, contratos, precificação, gestão de equipes e controle financeiro, até a organização operacional, planejamento de crescimento, sucessão e valorização do negócio. Em empresas de serviços, organização é o que garante qualidade, previsibilidade e margem.<br><br>A ACT já desenvolveu projetos e entregou resultados em diferentes segmentos de serviços, entre eles:", 
+            description: "Incluindo I.A. Veja: A ACT atua na organização e profissionalização de empresas prestadoras de serviços, apoiando negócios que dependem diretamente de pessoas, novas tecnologias e inteligências, processos bem definidos e controle rigoroso da operação. Nosso trabalho transforma rotinas informais em estruturas claras, eficientes e sustentáveis.<br><br>Atuamos desde a definição de regras internas, contratos, precificação, gestão de equipes e controle financeiro, até a organização operacional, planejamento de crescimento, sucessão e valorização do negócio. Em empresas de serviços, organização é o que garante qualidade, previsibilidade e margem.<br><br>A ACT já desenvolveu projetos e entregou resultados em diferentes segmentos de serviços, entre eles:", 
             list: [
               "Construção Civil;",
               "Logística;",
@@ -192,7 +193,7 @@ const translations = {
           },
           { 
             image: "img/expertises/6.png", 
-            title: "INSTITUIÇÕES", 
+            title: "ORGANIZAÇÕES & INSTITUIÇÕES DIVERSAS", 
             description: "A ACT atua no fortalecimento organizacional de instituições públicas, privadas e do terceiro setor, apoiando estruturas que lidam com múltiplos interesses, responsabilidades sociais e necessidade de transparência, governança e continuidade institucional.<br><br>Nosso trabalho envolve organização administrativa, financeira e operacional, definição de papéis, revisão de processos decisórios, apoio à governança, formação de lideranças e adequação às normas legais e regulatórias. Atuamos para transformar boas intenções em instituições organizadas, eficientes e confiáveis.<br><br>A ACT já desenvolveu projetos e entregou resultados em diferentes tipos de organizações e instituições, incluindo:", 
             list: [
               "Instituições de Ensino;",
@@ -375,32 +376,32 @@ const translations = {
           "<p style='margin-bottom: 0.5rem;'>A ACT revela o valor real da empresa, o que é fundamental para decisões estratégicas: venda parcial ou total, entrada de investidores, planejamento sucessório ou valorização do negócio antes da negociação. O valuation vira ferramenta de escolha, não apenas de preço.</p>",
           "<h3 style='margin-top: 1.5rem; color: var(--secondary-color);'>PILARES</h3>",
           "<ul style='list-style: none; padding-left: 0;'><li><strong>ORGANIZAR</strong> - Entender onde a empresa está e onde quer chegar, determinando ações com clareza técnica e humanizada.</li><li><strong>DESENVOLVER</strong> – Desenvolver pessoas, fortalecendo o capital humano alimentando o engajamento, desenvolver mercados, processos, cultura e tecnologias.</li><li><strong>EXPANDIR</strong> – Visualizar, avaliar e trabalhar cenários de mercado passíveis para a expansão. Consolidar modelos de crescimento seguros, lucrativos e alinhados ao propósito dos fundadores e seus stakeholder(s).</li></ul>",
-          "<p style='margin-top: 1rem;'>Nosso compromisso é ajudar organizações a evoluírem com consciência, estratégia e profundidade — sem perderem suas essências, seus valores e suas histórias.</p>",
-          "<h3 style='margin-top: 1.5rem; color: var(--secondary-color);'>PROPÓSITOS EMPRESARIAIS</h3>",
-          "<ul style='list-style: none; padding-left: 0;'><li><span class='purpose-item'>Ampliar receitas com inteligência estratégica,</span></li><li><span class='purpose-item'>Reduzir despesas sem comprometer a qualidade,</span></li><li><span class='purpose-item'>Entender a diferença de despesas, custos e investimentos, direcionando tudo com consciência de uma organização vencedora!</span></li><li><span class='purpose-item'>Proteger o patrimônio adquirido, construído com mérito e visão de longo prazo.</span></li></ul>"
+          "<p style='margin-top: 1rem;'>Nosso compromisso é ajudar organizações a evoluírem com consciência, estratégia e profundidade — sem perderem suas essências, seus valores e suas histórias.</p>"
+        ],
+        cardsIntro: "Essa base técnica se soma a princípios que trazem uma perspectiva real e futurista, que compreende as Organizações como espaços de convivência, criação e impacto positivo no bem-estar coletivo, e integram quatro propósitos técnicos empresariais essenciais na liderança das Organizações:",
+        cardsTitle: "PROPÓSITOS EMPRESARIAIS",
+        cards: [
+          {
+            text: "Ampliar receitas com inteligência estratégica.",
+            icon: '<svg viewBox="0 0 24 24"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg>'
+          },
+          {
+            text: "Reduzir despesas sem comprometer a qualidade.",
+            icon: '<svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>'
+          },
+          {
+            text: "Direcionar investimentos de forma consciente e sustentável.",
+            icon: '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.51-3.49L17.5 6.5 9.99 9.99 6.5 17.5zm5.5-6.6c.61 0 1.1.49 1.1 1.1s-.49 1.1-1.1 1.1-1.1-.49-1.1-1.1.49-1.1 1.1-1.1z"/></svg>'
+          },
+          {
+            text: "Proteger o patrimônio construído com mérito e visão de longo prazo.",
+            icon: '<svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>'
+          }
         ]
       },
       alexandre: {
         title: "Formação e vivências que orientam nossa visão",
-        content: "A ACT é conduzida por um administrador <strong>(Alexandre Tenorio)</strong>, formado e pós-graduado pela Escola Senac São Paulo, onde também, além de outras Instituições de Ensino, foi professor e coordenador de cursos de administração. Sua trajetória — junto à de parceiros especialistas — reúne cursos, congressos e ampla formação complementar em instituições nacionais e internacionais.<br><br>Sua atuação comprometida, inclui projetos autênticos, inovadores, mentorias em ecossistemas de inovação como startup weekend, hackathon, além de consultorias técnicas e gestão de organizações da indústria, varejo e serviços, sempre promovendo a integração entre tecnologia e comandos humanizados para impulsionar o crescimento empresarial e o desenvolvimento organizacional orientado a resultados, o que consolida uma visão multidisciplinar e contemporânea.<br><br>Essa base técnica se soma a princípios que trazem uma perspectiva real e futurista, que compreende as Organizações como espaços de convivência, criação e impacto positivo no bem-estar coletivo, e integram quatro propósitos técnicos empresariais essenciais na liderança das Organizações:",
-        cards: [
-          {
-            text: "Ampliar receitas com inteligência estratégica",
-            icon: '<svg viewBox="0 0 24 24"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg>'
-          },
-          {
-            text: "Reduzir despesas sem comprometer a qualidade",
-            icon: '<svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>'
-          },
-          {
-            text: "Direcionar investimentos de forma consciente e sustentável",
-            icon: '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.51-3.49L17.5 6.5 9.99 9.99 6.5 17.5zm5.5-6.6c.61 0 1.1.49 1.1 1.1s-.49 1.1-1.1 1.1-1.1-.49-1.1-1.1.49-1.1 1.1-1.1z"/></svg>'
-          },
-          {
-            text: "Proteger o patrimônio construído com mérito e visão de longo prazo",
-            icon: '<svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>'
-          }
-        ]
+        content: "A ACT é conduzida por um administrador <strong>(Alexandre Tenorio)</strong>, formado e pós-graduado pela Escola Senac São Paulo, onde também, além de outras Instituições de Ensino, foi professor e coordenador de cursos de administração. Sua trajetória — junto à de parceiros especialistas — reúne cursos, congressos e ampla formação complementar em instituições nacionais e internacionais.<br><br>Sua atuação comprometida, inclui projetos autênticos, inovadores, mentorias em ecossistemas de inovação como startup weekend, hackathon, além de consultorias técnicas e gestão de organizações da indústria, varejo e serviços, sempre promovendo a integração entre tecnologia e comandos humanizados para impulsionar o crescimento empresarial e o desenvolvimento organizacional orientado a resultados, o que consolida uma visão multidisciplinar e contemporânea."
       },
       mission: {
         missionTitle: "MISSÃO",

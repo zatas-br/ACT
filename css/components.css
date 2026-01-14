@@ -257,3 +257,8 @@
     height: 20px;
     fill: var(--secondary-color);
 }
+
+/* Specific Alignment for Expertise Grid (Indústrias, Varejos, etc.) */
+#expertise-grid .card-title {
+    text-align: center;
+}
