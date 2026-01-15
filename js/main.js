@@ -504,7 +504,7 @@ function setupHeroCarousel() {
     if (!track) return;
 
     const images = [
-        "img/Capas/2.png", "img/Capas/3.png", "img/Capas/4.png",
+        "img/Capas/1.png", "img/Capas/2.png", "img/Capas/3.png", "img/Capas/4.png",
         "img/Capas/5.png", "img/Capas/6.png", "img/Capas/7.png"
     ];
 
