@@ -175,7 +175,7 @@ const translations = {
           { 
             image: "img/expertises/3.png", 
             title: "SERVIÇOS", 
-            description: "Incluindo I.A. Veja: A ACT atua na organização e profissionalização de empresas prestadoras de serviços, apoiando negócios que dependem diretamente de pessoas, novas tecnologias e inteligências, processos bem definidos e controle rigoroso da operação. Nosso trabalho transforma rotinas informais em estruturas claras, eficientes e sustentáveis.<br><br>Atuamos desde a definição de regras internas, contratos, precificação, gestão de equipes e controle financeiro, até a organização operacional, planejamento de crescimento, sucessão e valorização do negócio. Em empresas de serviços, organização é o que garante qualidade, previsibilidade e margem.<br><br>A ACT já desenvolveu projetos e entregou resultados em diferentes segmentos de serviços, entre eles:", 
+            description: "A ACT atua na organização e profissionalização de empresas prestadoras de serviços, apoiando negócios que dependem diretamente de pessoas, novas tecnologias e inteligências artificiais, processos bem definidos e controle rigoroso da operação. Nosso trabalho transforma rotinas informais em estruturas claras, eficientes e sustentáveis.<br><br>Atuamos desde a definição de regras internas, contratos, precificação, gestão de equipes e controle financeiro, até a organização operacional, planejamento de crescimento, sucessão e valorização do negócio. Em empresas de serviços, organização é o que garante qualidade, previsibilidade e margem.<br><br>A ACT já desenvolveu projetos e entregou resultados em diferentes segmentos de serviços, entre eles:", 
             list: [
               "Construção Civil;",
               "Logística;",
@@ -424,14 +424,14 @@ const translations = {
       title: "Contato",
       items: [
         { type: "link", icon: "img/png/Facebook.png", text: "Facebook", href: "https://www.facebook.com/ACT.Gestao.Arte.Tude" },
+        { type: "link", icon: "img/png/whatsapp.svg", text: "Whatsapp", href: "mailto:contato@actadm.com.br?subject=Contato através do Site" },
         { type: "link", icon: "img/png/Mail.png", text: "contato@actadm.com.br", href: "mailto:contato@actadm.com.br?subject=Contato através do Site" }
       ]
     },
     footer: {
-      text: "<a href='mailto:contato@actadm.com.br?subject=Contato através do Site' style='color: inherit; text-decoration: none;'>ACT Partners & Development</a> | <a href='https://zatas.com.br/' target='_blank' style='color: inherit; text-decoration: none;'>Desenvolvido por Zatas</a>"
+      text: "<a href='mailto:contato@actadm.com.br?subject=Contato através do Site' style='color: inherit; text-decoration: none;'>ACT Partners & Development</a> | <a href='https://zatas.com.br/' target='_blank' style='color: inherit; text-decoration: none;'>Zatas</a>"
     }
   },
   en: {
-    // English content will be added here
   }
 };
