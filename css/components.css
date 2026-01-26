@@ -274,8 +274,7 @@
 
 .mission-card {
     background: #fff;
-    border: 15px solid transparent;
-    border-image: linear-gradient(135deg, #1e3b2a 0%, #6b5c3e 25%, #f2d8a7 50%, #6b5c3e 75%, #1e3b2a 100%) 1;
+    border: 15px solid #6b5c3e;
     box-shadow: 
         0 15px 30px rgba(0,0,0,0.4),
         inset 0 0 30px rgba(0,0,0,0.2); /* Inner shadow for depth */
