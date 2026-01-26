@@ -343,17 +343,26 @@ function loadAboutPageContent(content) {
     const mvvContainer = document.getElementById('mission-vision-values');
     if (mvvContainer) {
         mvvContainer.innerHTML = `
-            <div class="about-content" style="text-align: center;">
-                <h3 style="color: var(--secondary-color); margin-top: 1rem;">${about.mission.missionTitle}</h3>
-                <p>${about.mission.missionText}</p>
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <img src="img/png/1.png" alt="ACT Logo" class="mission-logo">
+                    <h3 class="mission-title">${about.mission.missionTitle}</h3>
+                    <p class="mission-text">${about.mission.missionText}</p>
+                </div>
 
-                <h3 style="color: var(--secondary-color); margin-top: 2rem;">${about.mission.visionTitle}</h3>
-                <p>${about.mission.visionText}</p>
+                <div class="mission-card">
+                    <img src="img/png/1.png" alt="ACT Logo" class="mission-logo">
+                    <h3 class="mission-title">${about.mission.visionTitle}</h3>
+                    <p class="mission-text">${about.mission.visionText}</p>
+                </div>
 
-                <h3 style="color: var(--secondary-color); margin-top: 2rem;">${about.mission.valuesTitle}</h3>
-                <ul style="text-align: left; display: inline-block; margin-top: 1rem;">
-                    ${about.mission.valuesList.map(v => `<li style="margin-bottom: 0.5rem;">• ${v}</li>`).join('')}
-                </ul>
+                <div class="mission-card">
+                    <img src="img/png/1.png" alt="ACT Logo" class="mission-logo">
+                    <h3 class="mission-title">${about.mission.valuesTitle}</h3>
+                    <ul class="mission-list">
+                        ${about.mission.valuesList.map(v => `<li>${v}</li>`).join('')}
+                    </ul>
+                </div>
             </div>
         `;
     }
