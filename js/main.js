@@ -11,7 +11,31 @@ document.addEventListener('DOMContentLoaded', () => {
     setupScrollAnimation();
     updateHeaderHeight();
     window.addEventListener('resize', updateHeaderHeight);
+    window.addEventListener('resize', adjustMissionCardsHeight);
 });
+
+function adjustMissionCardsHeight() {
+    const referenceCard = document.querySelector('.mission-content-wrapper.reference-card');
+    const expandables = document.querySelectorAll('.mission-content-wrapper.expandable-card');
+    const continueReadingBtn = document.querySelector('.continue-reading');
+    
+    if (referenceCard && expandables.length > 0) {
+        // We use scrollHeight to get the full height of the content
+        let height = referenceCard.scrollHeight;
+        
+        // Subtract the button height to make the total card height match the reference
+        if (continueReadingBtn) {
+            const btnStyles = window.getComputedStyle(continueReadingBtn);
+            const btnHeight = continueReadingBtn.offsetHeight + parseFloat(btnStyles.marginTop) + parseFloat(btnStyles.marginBottom);
+            height -= btnHeight;
+        }
+
+        expandables.forEach(card => {
+            // Apply the height limit
+            card.style.maxHeight = `${height}px`;
+        });
+    }
+}
 
 function updateHeaderHeight() {
     const header = document.querySelector('header');
@@ -347,25 +371,84 @@ function loadAboutPageContent(content) {
                 <div class="mission-card">
                     <img src="img/png/1.png" alt="ACT Logo" class="mission-logo">
                     <h3 class="mission-title">${about.mission.missionTitle}</h3>
-                    <p class="mission-text">${about.mission.missionText}</p>
+                    <div class="mission-content-wrapper reference-card">
+                        <p class="mission-text">${about.mission.missionText}</p>
+                    </div>
                 </div>
 
                 <div class="mission-card">
                     <img src="img/png/1.png" alt="ACT Logo" class="mission-logo">
                     <h3 class="mission-title">${about.mission.visionTitle}</h3>
-                    <p class="mission-text">${about.mission.visionText}</p>
+                    <div class="mission-content-wrapper expandable-card">
+                        <p class="mission-text">${about.mission.visionText}</p>
+                    </div>
+                    <div class="continue-reading">Continue lendo</div>
                 </div>
 
                 <div class="mission-card">
                     <img src="img/png/1.png" alt="ACT Logo" class="mission-logo">
                     <h3 class="mission-title">${about.mission.valuesTitle}</h3>
-                    <ul class="mission-list">
-                        ${about.mission.valuesList.map(v => `<li>${v}</li>`).join('')}
-                    </ul>
+                    <div class="mission-content-wrapper expandable-card">
+                        ${about.mission.valuesText ? 
+                            `<div class="mission-text">${about.mission.valuesText}</div>` : 
+                            `<ul class="mission-list">${about.mission.valuesList.map(v => `<li>${v}</li>`).join('')}</ul>`
+                        }
+                    </div>
+                    <div class="continue-reading">Continue lendo</div>
                 </div>
             </div>
         `;
+        
+        // Adjust height after render to ensure styles are applied
+        setTimeout(() => {
+            adjustMissionCardsHeight();
+            setupMobileMissionToggle();
+        }, 100);
     }
+}
+
+function setupMobileMissionToggle() {
+    console.log("Setting up mobile mission toggle");
+    const expandables = document.querySelectorAll('.mission-card');
+    
+    expandables.forEach(card => {
+        // Only target cards with the continue-reading button
+        const btn = card.querySelector('.continue-reading');
+        if (btn) {
+            btn.addEventListener('click', (e) => {
+                console.log("Continue reading clicked. Width: " + window.innerWidth);
+                // Prevent interference if desktop hover is active (though click works)
+                if (window.innerWidth <= 1024) { // Target mobile/tablet
+                    e.stopPropagation();
+                    const isExpanded = card.classList.contains('mobile-expanded');
+                    
+                    // Close others
+                    document.querySelectorAll('.mission-card.mobile-expanded').forEach(other => {
+                        if (other !== card) other.classList.remove('mobile-expanded');
+                    });
+
+                    if (isExpanded) {
+                        card.classList.remove('mobile-expanded');
+                        btn.innerText = 'Continue lendo';
+                    } else {
+                        card.classList.add('mobile-expanded');
+                        btn.innerText = 'Fechar';
+                    }
+                }
+            });
+            
+            // Allow clicking the content to close if expanded
+            const content = card.querySelector('.mission-content-wrapper');
+            if (content) {
+                content.addEventListener('click', () => {
+                     if (window.innerWidth <= 1024 && card.classList.contains('mobile-expanded')) {
+                         card.classList.remove('mobile-expanded');
+                         if (btn) btn.innerText = 'Continue lendo';
+                     }
+                });
+            }
+        }
+    });
 }
 
 function renderCards(containerId, items) {

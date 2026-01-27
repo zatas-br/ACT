@@ -409,6 +409,7 @@ const translations = {
         visionTitle: "VISÃO",
         visionText: "Ser referência sem fronteiras em Administração 360°, entregando resultados consistentes por meio de uma Consultoria de Transformação Organizacional. Contribuir para um futuro em que os comandos, instituições, empresas, comunidades e ecossistemas prosperem com equilíbrio, propósito digno e inovação responsável.",
         valuesTitle: "VALORES",
+        valuesText: "<p>A ACT atua com Atitude, Comprometimento e Técnica. Coragem, responsabilidade, ética e cultura sustentam essa forma de agir, refletindo no respeito às pessoas, às suas histórias e ao trabalho desenvolvido junto às suas organizações.</p><p>Utiliza métodos artesanais, porém sólidos, contemporâneos e validados, acreditando no potencial brasileiro de inovação e no uso consciente da tecnologia para melhorar a vida das pessoas e do ecossistema empresarial.</p><p>Defende a educação permanente como base da evolução coletiva e reconhece modelos autossustentáveis como pilares para decisões que preservam o futuro.</p>",
         valuesList: [
           "Atitude — agir com coragem, clareza e senso de responsabilidade.",
           "Comprometimento — entregar com profundidade, ética e respeito ao ser humano.",
