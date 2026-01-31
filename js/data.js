@@ -404,9 +404,9 @@ const translations = {
         missionTitle: "MISSÃO",
         missionText: "Conduzir e formar Lideranças para que suas Organizações alcancem maturidade estratégica, humana e tecnológica. Promover decisões conscientes e assertivas, possibilitando uma expansão sustentável e gerando impacto positivo na sociedade.",
         visionTitle: "VISÃO",
-        visionText: "Ser referência sem fronteiras em Administração 360°, entregando resultados consistentes por meio de uma Consultoria de Transformação Organizacional. Contribuir para um futuro em que os comandos, instituições, empresas, comunidades e ecossistemas prosperem com equilíbrio, propósito digno e inovação responsável.",
+        visionText: "Ser referência sem fronteiras em Administração 360°, entregando resultados consistentes por meio de uma Consultoria de Transformação Organizacional, contribuindo para a evolução humana e o fortalecimento dos ecossistemas onde atua.",
         valuesTitle: "VALORES",
-        valuesText: "<p>A ACT atua com Atitude, Comprometimento e Técnica. Coragem, responsabilidade, ética e cultura sustentam essa forma de agir, refletindo no respeito às pessoas, às suas histórias e ao trabalho desenvolvido junto às suas organizações.</p><p>Utiliza métodos artesanais, porém sólidos, contemporâneos e validados, acreditando no potencial brasileiro de inovação e no uso consciente da tecnologia para melhorar a vida das pessoas e do ecossistema empresarial.</p><p>Defende a educação permanente como base da evolução coletiva e reconhece modelos autossustentáveis como pilares para decisões que preservam o futuro.</p>",
+        valuesText: "<p>A ACT atua com Atitude, Comprometimento e Técnica, guiada pela coragem, responsabilidade e ética. Valoriza as pessoas, suas histórias empreendedoras e o respeito ao planeta, acreditando que organizações fortes são construídas com consciência, cultura e propósito.</p>",
         valuesList: [
           "Atitude — agir com coragem, clareza e senso de responsabilidade.",
           "Comprometimento — entregar com profundidade, ética e respeito ao ser humano.",

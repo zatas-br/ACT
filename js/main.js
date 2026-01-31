@@ -371,7 +371,7 @@ function loadAboutPageContent(content) {
                 <div class="mission-card">
                     <img src="img/png/1.png" alt="ACT Logo" class="mission-logo">
                     <h3 class="mission-title">${about.mission.missionTitle}</h3>
-                    <div class="mission-content-wrapper reference-card">
+                    <div class="mission-content-wrapper">
                         <p class="mission-text">${about.mission.missionText}</p>
                     </div>
                 </div>
@@ -379,22 +379,20 @@ function loadAboutPageContent(content) {
                 <div class="mission-card">
                     <img src="img/png/1.png" alt="ACT Logo" class="mission-logo">
                     <h3 class="mission-title">${about.mission.visionTitle}</h3>
-                    <div class="mission-content-wrapper expandable-card">
+                    <div class="mission-content-wrapper">
                         <p class="mission-text">${about.mission.visionText}</p>
                     </div>
-                    <div class="continue-reading">Continue lendo</div>
                 </div>
 
                 <div class="mission-card">
                     <img src="img/png/1.png" alt="ACT Logo" class="mission-logo">
                     <h3 class="mission-title">${about.mission.valuesTitle}</h3>
-                    <div class="mission-content-wrapper expandable-card">
+                    <div class="mission-content-wrapper">
                         ${about.mission.valuesText ? 
                             `<div class="mission-text">${about.mission.valuesText}</div>` : 
                             `<ul class="mission-list">${about.mission.valuesList.map(v => `<li>${v}</li>`).join('')}</ul>`
                         }
                     </div>
-                    <div class="continue-reading">Continue lendo</div>
                 </div>
             </div>
         `;

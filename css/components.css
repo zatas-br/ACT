@@ -407,7 +407,7 @@ section h2 {
     gap: 2rem;
     flex-wrap: wrap;
     margin-top: 2rem;
-    align-items: flex-start; /* Prevent cards from stretching to match tallest sibling */
+    align-items: stretch;
 }
 
 .mission-card {
@@ -488,52 +488,6 @@ section h2 {
     line-height: 1;
 }
 
-/* New Mission Card Styling for Expansion */
 .mission-content-wrapper {
-    overflow: hidden;
-    transition: max-height 1.0s ease-in-out; /* Slowed down by 25% */
     width: 100%;
-}
-
-.mission-content-wrapper.expandable-card {
-    /* Initial state set by JS, but good to have a fallback */
-    max-height: 200px;
-}
-
-.continue-reading {
-    margin-top: 1rem;
-    color: var(--secondary-color);
-    font-weight: bold;
-    font-size: 0.9rem;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-    /* Position it nicely */
-    position: relative;
-    z-index: 2;
-}
-
-/* Expansion for Desktop Hover */
-@media (min-width: 1025px) {
-    .mission-card:hover .mission-content-wrapper {
-        max-height: 2000px !important; 
-    }
-    .mission-card:hover .continue-reading {
-        opacity: 0;
-        pointer-events: none;
-    }
-}
-
-/* Expansion for Mobile Toggle */
-.mission-card.mobile-expanded .mission-content-wrapper {
-    max-height: 2000px !important; 
-}
-
-/* On mobile, keep button visible to allow toggling off */
-.mission-card.mobile-expanded .continue-reading {
-    opacity: 1;
-    pointer-events: auto;
-    margin-top: 1rem;
 }
