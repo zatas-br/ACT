@@ -1,8 +1,0 @@
-
-# DO NOT REMOVE THIS LINE AND THE LINES BELOW PWPROTECTID:mbcMky79dN
-AuthType Basic
-AuthName "Restricted Access"
-AuthUserFile /home/u891089629/domains/actadministracao.com.br/public_html/.htpasswd
-Require valid-user
-# DO NOT REMOVE THIS LINE AND THE LINES ABOVE mbcMky79dN:PWPROTECTID
-
