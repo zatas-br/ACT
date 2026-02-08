@@ -20,7 +20,7 @@ const translations = {
         buttonText: "Conheça mais"
       },
       services: {
-        title: "Serviços",
+        title: "EXPERTISES",
         items: [
           {
             image: "img/servicos/2.png",
