@@ -690,7 +690,7 @@ function setupHeroCarousel() {
     // effectively showing the NEXT item on the right.
     function startAutoPlay() {
         if (window.heroInterval) clearInterval(window.heroInterval);
-        window.heroInterval = setInterval(slidePrev, 5000);
+        window.heroInterval = setInterval(slideNext, 5000);
     }
 
     function resetAutoPlay() {
@@ -862,7 +862,7 @@ function setupTestimonials(itemsData) {
     });
 
     function startAutoPlay() {
-        testimonialInterval = setInterval(movePrev, 5000);
+        testimonialInterval = setInterval(moveNext, 5000);
     }
 
     function resetAutoPlay() {
