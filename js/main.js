@@ -345,23 +345,23 @@ function loadAboutPageContent(content) {
 
         if (about.history.cards && about.history.cards.length > 0) {
             const cardsHtml = about.history.cards.map(card => `
-                <div class="leadership-card">
+                <div class="alexandre-card">
                     ${card.icon}
                     <p>${card.text}</p>
                 </div>
             `).join('');
-            historyHtml += `<div class="leadership-grid">${cardsHtml}</div>`;
+            historyHtml += `<div class="alexandre-grid">${cardsHtml}</div>`;
         }
 
         histContent.innerHTML = historyHtml;
     }
 
-    const alexTitle = document.getElementById('leadership-title');
-    if (alexTitle) alexTitle.innerText = about.leadership.title;
+    const alexTitle = document.getElementById('alexandre-title');
+    if (alexTitle) alexTitle.innerText = about.alexandre.title;
     
-    const alexContent = document.getElementById('leadership-content');
+    const alexContent = document.getElementById('alexandre-content');
     if (alexContent) {
-        alexContent.innerHTML = `<p>${about.leadership.content}</p>`;
+        alexContent.innerHTML = `<p>${about.alexandre.content}</p>`;
     }
 
     const mvvContainer = document.getElementById('mission-vision-values');
