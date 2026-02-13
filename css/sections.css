@@ -90,15 +90,15 @@ section h2 {
     height: 24px;
 }
 
-/* Alexandre Cards Grid */
-.alexandre-grid {
+/* Leadership Cards Grid */
+.leadership-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
     margin-top: 2rem;
 }
 
-.alexandre-card {
+.leadership-card {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -113,12 +113,12 @@ section h2 {
     height: 100%;
 }
 
-.alexandre-card:hover {
+.leadership-card:hover {
     transform: translateY(-5px);
     background: rgba(255, 255, 255, 0.08);
 }
 
-.alexandre-card p {
+.leadership-card p {
     color: #D4AF37;
     font-size: 1rem;
     margin: 0 !important;
@@ -126,7 +126,7 @@ section h2 {
     line-height: 1.3;
 }
 
-.alexandre-card svg {
+.leadership-card svg {
     fill: #fff;
     width: 32px;
     height: 32px;
@@ -134,7 +134,7 @@ section h2 {
 }
 
 @media (max-width: 768px) {
-    .alexandre-grid {
+    .leadership-grid {
         grid-template-columns: 1fr;
     }
 }

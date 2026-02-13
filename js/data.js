@@ -226,7 +226,7 @@ const translations = {
           },
           {
             image: "img/Depoimentos/assesi-sp.jpeg",
-            text: "O Gestor Alexandre teve um papel fundamental na integração dos colaboradores da ASSESI, criando e conduzindo ações inovadoras como gincanas, jogos e intervenções culturais. O trabalho fortaleceu o espírito de equipe, melhorou o clima organizacional e promoveu engajamento entre áreas diversas da instituição.",
+            text: "A gestão da ACT teve um papel fundamental na integração dos colaboradores da ASSESI, criando e conduzindo ações inovadoras como gincanas, jogos e intervenções culturais. O trabalho fortaleceu o espírito de equipe, melhorou o clima organizacional e promoveu engajamento entre áreas diversas da instituição.",
             stars: 5,
             author: "<strong>Agente Colaborador em Integração de Equipes</strong><br>Associação ASSESI – São Paulo"
           },
@@ -244,7 +244,7 @@ const translations = {
           },
           {
             image: "img/Depoimentos/flamboyant.jpeg",
-            text: "O trabalho desenvolvido pelo Gestor Alexandre no Grupo Flamboyant foi decisivo para a organização dos processos operacionais e administrativos. Com uma abordagem prática e humanizada, a consultoria impactou positivamente a performance das equipes, a experiência dos hóspedes e os resultados do negócio.",
+            text: "O trabalho desenvolvido pela ACT no Grupo Flamboyant foi decisivo para a organização dos processos operacionais e administrativos. Com uma abordagem prática e humanizada, a consultoria impactou positivamente a performance das equipes, a experiência dos hóspedes e os resultados do negócio.",
             stars: 5,
             author: "<strong>Consultoria em Hotelaria e Serviços</strong><br>Flamboyant MG"
           },
@@ -262,25 +262,25 @@ const translations = {
           },
           {
             image: "img/Depoimentos/pousada-do-lago.jpeg",
-            text: "Alexandre é um profissional muito experiente na gestão de negócios, com um diferencial em Empresas Familiares... Muito assertivo. Gerou importantes resultados financeiros para nossa empresa....",
+            text: "O Consultor é um profissional muito experiente na gestão de negócios, com um diferencial em Empresas Familiares... Muito assertivo. Gerou importantes resultados financeiros para nossa empresa....",
             stars: 5,
             author: "<strong>FERNANDO G. (CEO) Tecnologia e Hotelaria</strong>"
           },
           {
             image: "img/Depoimentos/bricka.jpeg",
-            text: "A ACT Consultoria, nos apoiou tecnicamente com sucesso nas questões operacionais, financeiras e administrativas... O Consultor Alexandre é persistente, quando se trata de encontrar resultados positivos para seus clientes.",
+            text: "A ACT Consultoria, nos apoiou tecnicamente com sucesso nas questões operacionais, financeiras e administrativas... O Consultor é persistente, quando se trata de encontrar resultados positivos para seus clientes.",
             stars: 5,
             author: "<strong>ERICK O. (Diretor Comercial) Construção Civil</strong>"
           },
           {
             image: "img/Depoimentos/coroaves.jpeg",
-            text: "Alexandre é um Profissional capacitado, de alta integridade e com ótimos resultados.",
+            text: "O Consultor é um Profissional capacitado, de alta integridade e com ótimos resultados.",
             stars: 5,
             author: "<strong>RENATO C.R (DIRETOR COMERCIAL) COROAVES</strong>"
           },
           {
             image: "img/Depoimentos/ciao bello.jpeg",
-            text: "O Administrador Alexandre é um Consultor experiente em Valuation para Pequenas Empresas Familiares. Organizou gerencialmente nossa Empresa e fez a captação de um comprador/investidor, dentro das expectativas que esperávamos.",
+            text: "O Administrador da ACT é um Consultor experiente em Valuation para Pequenas Empresas Familiares. Organizou gerencialmente nossa Empresa e fez a captação de um comprador/investidor, dentro das expectativas que esperávamos.",
             stars: 5,
             author: "<strong>Thomas T.S. (Sócio Proprietário) Segmento_Alimentos & Bebidas</strong>"
           },
@@ -298,13 +298,13 @@ const translations = {
           },
           {
             image: "img/Depoimentos/desomax.jpeg",
-            text: "O Escritório ACT Gestão de Resultados, na pessoa do Consultor, senhor Alexandre, realizou um trabalho importante conosco, revelando novas possibilidades de crescimento sustentável e melhorando a visão estratégica de nossa empresa...",
+            text: "O Escritório ACT Gestão de Resultados, na pessoa de seu Consultor, realizou um trabalho importante conosco, revelando novas possibilidades de crescimento sustentável e melhorando a visão estratégica de nossa empresa...",
             stars: 5,
             author: "<strong>Ademir C. (Dir.Presidente) Produtos de Limpeza</strong>"
           },
           {
             image: "img/Depoimentos/pizza-nova.jpeg",
-            text: "Somos muito gratos ao Alexandre da ACT Administração, pois o escritório trabalhou o Valuation em nossa empresa, e empreendeu muitos esforços para as negociações otimizadas com terceiros, analisando sensivelmente as melhores possibilidades e sempre diminuindo o máximo de despesas fixas das nossas operações nesse período.",
+            text: "Somos muito gratos ao Consultor da ACT Administração, pois o escritório trabalhou o Valuation em nossa empresa, e empreendeu muitos esforços para as negociações otimizadas com terceiros, analisando sensivelmente as melhores possibilidades e sempre diminuindo o máximo de despesas fixas das nossas operações nesse período.",
             stars: 5,
             author: "<strong>Ronildo C.S.(Proprietário)PRODUÇÃO E VENDA - ALIMENTOS</strong>"
           },
@@ -316,19 +316,19 @@ const translations = {
           },
           {
             image: "img/Depoimentos/tech-owner-erp.jpeg",
-            text: "Conheci o Alexandre no treinamento EMPRETEC do SEBRAE... pude sentir que ele é um profissional dedicado aos seus clientes, procurando sempre as melhores práticas e melhores sugestões para organizar e otimizar os rendimentos nos negócios de seus clientes, sempre com olhar crítico e com posicionamento firme. Na Gestão Empresarial detém conhecimentos que auxiliam na alavancagem dos negócios.",
+            text: "Conheci o Consultor no treinamento EMPRETEC do SEBRAE... pude sentir que ele é um profissional dedicado aos seus clientes, procurando sempre as melhores práticas e melhores sugestões para organizar e otimizar os rendimentos nos negócios de seus clientes, sempre com olhar crítico e com posicionamento firme. Na Gestão Empresarial detém conhecimentos que auxiliam na alavancagem dos negócios.",
             stars: 5,
             author: "<strong>Marivaldo S. (OWNER)TECNOLOGIA ERP</strong>"
           },
           {
             image: "img/Depoimentos/rb-seguranca.jpeg",
-            text: "O Sr. Alexandre Tenório é um profissional aplicado e responsável, tendo desempenhado suas funções como Presidente da Associação/Síndico em nosso Residencial, por 3 anos, com muita seriedade. Realizou muitos benefícios ao condomínio, sempre mantendo a transparência em sua Administração.",
+            text: "O Consultor é um profissional aplicado e responsável, tendo desempenhado suas funções como Presidente da Associação/Síndico em nosso Residencial, por 3 anos, com muita seriedade. Realizou muitos benefícios ao condomínio, sempre mantendo a transparência em sua Administração.",
             stars: 5,
             author: "<strong>ROMUALDO B. (C.FISCAL E CONSULTOR SEGURANÇA)</strong><br>Associação RESIDENCIAL PARATY (interior SP)"
           },
           {
             image: "img/Depoimentos/rede-salesiana.jpg",
-            text: "A ACT, na pessoa do Consultor e Educador Alexandre, desenvolveu conosco o projeto sociocultural “Dança Criança”, nos anos de 2017 e 2018, que teve como objetivo, através das aulas de Danças Sociais Brasileiras, com Musicalização de autores consagrados; provocar nos educandos, outras leituras culturais, novas perspectivas potenciais de horizontes para as crianças, agregando outras sonoridades nos cotidianos e influenciando no exercício da cidadania. Nosso Muito Obrigado!",
+            text: "A ACT, na pessoa de seu Consultor e Educador, desenvolveu conosco o projeto sociocultural “Dança Criança”, nos anos de 2017 e 2018, que teve como objetivo, através das aulas de Danças Sociais Brasileiras, com Musicalização de autores consagrados; provocar nos educandos, outras leituras culturais, novas perspectivas potenciais de horizontes para as crianças, agregando outras sonoridades nos cotidianos e influenciando no exercício da cidadania. Nosso Muito Obrigado!",
             stars: 5,
             author: "<strong>(Elaine H. Salesianos – Interior SP)</strong><br>Instituição de Projetos Sociais - Salesianos"
           },
@@ -340,7 +340,7 @@ const translations = {
           },
           {
             image: "img/Depoimentos/jardim-eventos-e-festas.jpeg",
-            text: "O Administrador Alexandre esteve nos assessorando durante um ano em diversas áreas da empresa. Nos auxiliou no desenvolvimento de processos administrativos, na redução de custos e no controle de gastos. Nos apresentou uma visão administrativa sólida que culminou na evolução dos processos na empresa seja no tocante a compras, controle de estoque, gestão de pessoas, gerenciamento e análise dos resultados.",
+            text: "O Administrador esteve nos assessorando durante um ano em diversas áreas da empresa. Nos auxiliou no desenvolvimento de processos administrativos, na redução de custos e no controle de gastos. Nos apresentou uma visão administrativa sólida que culminou na evolução dos processos na empresa seja no tocante a compras, controle de estoque, gestão de pessoas, gerenciamento e análise dos resultados.",
             stars: 5,
             author: "<strong>JARDINAGEM – Sócios / Luis e Tânia</strong>"
           }
@@ -389,7 +389,7 @@ const translations = {
           }
         ]
       },
-      alexandre: {
+      leadership: {
         title: "Formação e vivências que orientam nossa visão",
         content: "A ACT é conduzida por um administrador formado e pós-graduado pela Escola Senac São Paulo, onde também atuou como professor e coordenador de cursos de Administração, além de experiências em outras instituições de ensino.<br><br>Sua trajetória, somada à atuação de parceiros especialistas, reúne formação contínua, vivência prática em diferentes setores e domínio de metodologias contemporâneas de gestão, governança, controle financeiro, indicadores de desempenho e sustentabilidade organizacional.<br><br>A ACT atua em projetos estratégicos de organização, desenvolvimento e expansão de negócios, integrando processos, pessoas e tecnologia — do planejamento inicial à profissionalização da gestão, expansão estruturada e decisões patrimoniais — sempre orientada a resultados consistentes e à realidade de cada organização."
       },
