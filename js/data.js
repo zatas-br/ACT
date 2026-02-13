@@ -15,7 +15,7 @@ const translations = {
         title: "Sobre a ACT",
         paragraphs: [
           "<p>A ACT é uma consultoria fundada em 2009 e especializada em Organização, Desenvolvimento e Expansão Empresarial. Atuamos de forma estratégica, técnica e humana — conduzindo empresas, líderes e comunidades em processos de transformação madura, artesanal, tecnológica, silenciosa e profundamente efetiva. E, afetiva!</p>",
-                    "<p>Nosso trabalho integra gestão, inovação, cultura e educação voltados ao futuro. Acreditamos na força das organizações, sejam empresariais ou sociais, como instrumentos capazes de promover bem-estar, dignidade, pertencimento e resultados sustentáveis. Trabalhamos com empresas de diferentes portes e segmentos, conduzindo projetos que vão desde a estruturação de um novo negócio até processos complexos de facilities, expansão, sucessão e valuation. Ao longo dessa jornada, construímos uma abordagem única: análises precisas, visão sistêmica e respeito absoluto ao capital humano.</p>"
+          "<p>Nosso trabalho integra gestão, inovação, cultura e educação voltados ao futuro. Acreditamos na força das organizações, sejam empresariais ou sociais, como instrumentos capazes de promover bem-estar, dignidade, pertencimento e resultados sustentáveis. Trabalhamos com empresas de diferentes portes e segmentos, conduzindo projetos que vão desde a estruturação de um novo negócio até processos complexos de facilities, expansão, sucessão e valuation. Ao longo dessa jornada, construímos uma abordagem única: análises precisas, visão sistêmica e respeito absoluto ao capital humano.</p>"
         ],
         buttonText: "Conheça mais"
       },
@@ -244,7 +244,7 @@ const translations = {
           },
           {
             image: "img/Depoimentos/flamboyant.jpeg",
-            text: "O trabalho desenvolvido pelo Gestor Alexandre no Grupo Flamboyant foi decisivo para a organização dos processos operacionais e administrativos. Com uma abordagem prática e humanizada, a consultoria impactou positivamente a performance das equipes, a experiência dos hóspedes e os resultados do negócio.",
+            text: "O trabalho desenvolvido pelo Gestor Alexandre no Grupo Flamboyant foi decisivo para a organização dos processos operacionais e administrativos. Com uma abordagem prática e humanizada, a consultoria impactou positivamente a performance das equipes, a experiênça dos hóspedes e os resultados do negócio.",
             stars: 5,
             author: "<strong>Consultoria em Hotelaria e Serviços</strong><br>Flamboyant MG"
           },
@@ -262,7 +262,7 @@ const translations = {
           },
           {
             image: "img/Depoimentos/pousada-do-lago.jpeg",
-            text: "Alexandre é um profissional muito experiente na gestão de negócios, com um diferencial em Empresas Familiares... Muito assertivo. Gerou importantes resultados financeiros para nossa empresa....",
+            text: "Consultor Alexandre, é um profissional muito experiente na gestão de negócios, com um diferencial em Empresas Familiares... Muito assertivo. Gerou importantes resultados financeiros para nossa empresa....",
             stars: 5,
             author: "<strong>FERNANDO G. (CEO) Tecnologia e Hotelaria</strong>"
           },
@@ -274,7 +274,7 @@ const translations = {
           },
           {
             image: "img/Depoimentos/coroaves.jpeg",
-            text: "Alexandre é um Profissional capacitado, de alta integridade e com ótimos resultados.",
+            text: "Consultor Alexandre, é um profissional capacitado, de alta integridade e com ótimos resultados.",
             stars: 5,
             author: "<strong>RENATO C.R (DIRETOR COMERCIAL) COROAVES</strong>"
           },
@@ -304,7 +304,7 @@ const translations = {
           },
           {
             image: "img/Depoimentos/pizza-nova.jpeg",
-            text: "Somos muito gratos ao Alexandre da ACT Administração, pois o escritório trabalhou o Valuation em nossa empresa, e empreendeu muitos esforços para as negociações otimizadas com terceiros, analisando sensivelmente as melhores possibilidades e sempre diminuindo o máximo de despesas fixas das nossas operações nesse período.",
+            text: "Somos muito gratos ao Alexandre, consultor da ACT Administração, pois o escritório trabalhou o Valuation em nossa empresa, e empreendeu muitos esforços para as negociações otimizadas com terceiros, analisando sensivelmente as melhores possibilidades e sempre diminuindo o máximo de despesas fixas das nossas operações nesse período.",
             stars: 5,
             author: "<strong>Ronildo C.S.(Proprietário)PRODUÇÃO E VENDA - ALIMENTOS</strong>"
           },
@@ -316,19 +316,19 @@ const translations = {
           },
           {
             image: "img/Depoimentos/tech-owner-erp.jpeg",
-            text: "Conheci o Alexandre no treinamento EMPRETEC do SEBRAE... pude sentir que ele é um profissional dedicado aos seus clientes, procurando sempre as melhores práticas e melhores sugestões para organizar e otimizar os rendimentos nos negócios de seus clientes, sempre com olhar crítico e com posicionamento firme. Na Gestão Empresarial detém conhecimentos que auxiliam na alavancagem dos negócios.",
+            text: "Conheci o consultor Alexandre no treinamento Empretec do SEBRAE... pude sentir que ele é um profissional dedicado aos seus clientes, procurando sempre as melhores práticas e melhores sugestões para organizar e otimizar os rendimentos nos negócios de seus clientes, sempre com olhar crítico e com posicionamento firme. Na Gestão Empresarial detém conhecimentos que auxiliam na alavancagem dos negócios.",
             stars: 5,
             author: "<strong>Marivaldo S. (OWNER)TECNOLOGIA ERP</strong>"
           },
           {
             image: "img/Depoimentos/rb-seguranca.jpeg",
-            text: "O Sr. Alexandre Tenório é um profissional aplicado e responsável, tendo desempenhado suas funções como Presidente da Associação/Síndico em nosso Residencial, por 3 anos, com muita seriedade. Realizou muitos benefícios ao condomínio, sempre mantendo a transparência em sua Administração.",
+            text: "O consultor Alexandre é um profissional aplicado e responsável, tendo desempenhado suas funções como Presidente da Associação/Síndico em nosso Residencial, por 3 anos, com muita seriedade. Realizou muitos benefícios ao condomínio, sempre mantendo a transparência em sua Administração.",
             stars: 5,
             author: "<strong>ROMUALDO B. (C.FISCAL E CONSULTOR SEGURANÇA)</strong><br>Associação RESIDENCIAL PARATY (interior SP)"
           },
           {
             image: "img/Depoimentos/rede-salesiana.jpg",
-            text: "A ACT, na pessoa do Consultor e Educador Alexandre, desenvolveu conosco o projeto sociocultural “Dança Criança”, nos anos de 2017 e 2018, que teve como objetivo, através das aulas de Danças Sociais Brasileiras, com Musicalização de autores consagrados; provocar nos educandos, outras leituras culturais, novas perspectivas potenciais de horizontes para as crianças, agregando outras sonoridades nos cotidianos e influenciando no exercício da cidadania. Nosso Muito Obrigado!",
+            text: "O Alexandre, consultor e educador da ACT, desenvolveu conosco o projeto sociocultural “Dança Criança”, nos anos de 2017 e 2018, que teve como objetivo, através das aulas de Danças Sociais Brasileiras, com Musicalização de autores consagrados; provocar nos educandos, outras leituras culturais, novas perspectivas potenciais de horizontes para as crianças, agregando outras sonoridades nos cotidianos e influenciando no exercício da cidadania. Nosso Muito Obrigado!",
             stars: 5,
             author: "<strong>(Elaine H. Salesianos – Interior SP)</strong><br>Instituição de Projetos Sociais - Salesianos"
           },
@@ -340,7 +340,7 @@ const translations = {
           },
           {
             image: "img/Depoimentos/jardim-eventos-e-festas.jpeg",
-            text: "O Administrador Alexandre esteve nos assessorando durante um ano em diversas áreas da empresa. Nos auxiliou no desenvolvimento de processos administrativos, na redução de custos e no controle de gastos. Nos apresentou uma visão administrativa sólida que culminou na evolução dos processos na empresa seja no tocante a compras, controle de estoque, gestão de pessoas, gerenciamento e análise dos resultados.",
+            text: "O administrador Alexandre esteve nos assessorando durante um ano em diversas áreas da empresa. Nos auxiliou no desenvolvimento de processos administrativos, na redução de custos e no controle de gastos. Nos apresentou uma visão administrativa sólida que culminou na evolução dos processos na empresa seja no tocante a compras, controle de estoque, gestão de pessoas, gerenciamento e análise dos resultados.",
             stars: 5,
             author: "<strong>JARDINAGEM – Sócios / Luis e Tânia</strong>"
           }
