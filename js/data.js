@@ -208,7 +208,7 @@ const translations = {
           },
           {
             image: "img/Depoimentos/senac.jpeg",
-            text: "Como professor e coordenador pedagógico no SENAC SP, a ACT demonstrou excelência didática, liderança educacional e profundo domínio da Administração contemporânea. Sua atuação contribuiu diretamente para a formação técnica e humana dos alunos, conectando educação, mercado e inovação.",
+            text: "Como professor e coordenador pedagógico no SENAC SP, o administrador Alexandre da ACT, demonstrou excelência didática, liderança educacional e profundo domínio da gestão contemporânea. Sua atuação contribuiu diretamente para a formação técnica e humana dos alunos, conectando educação, mercado e inovação.",
             stars: 5,
             author: "<strong>Professor e Coordenador Pedagógico</strong><br>SENAC São Paulo"
           },
