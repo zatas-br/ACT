@@ -14,8 +14,9 @@ const translations = {
       about: {
         title: "Sobre a ACT",
         paragraphs: [
-          "<p>A ACT é uma consultoria fundada em 2009 e especializada em Organização, Desenvolvimento e Expansão Empresarial. Atuamos de forma estratégica, técnica e humana — conduzindo empresas, líderes e comunidades em processos de transformação madura, artesanal, tecnológica, silenciosa e profundamente efetiva. E, afetiva!</p>",
-          "<p>Nosso trabalho integra gestão, inovação, cultura e educação voltados ao futuro. Acreditamos na força das organizações, sejam empresariais ou sociais, como instrumentos capazes de promover bem-estar, dignidade, pertencimento e resultados sustentáveis. Trabalhamos com empresas de diferentes portes e segmentos, conduzindo projetos que vão desde a estruturação de um novo negócio até processos complexos de facilities, expansão, sucessão e valuation. Ao longo dessa jornada, construímos uma abordagem única: análises precisas, visão sistêmica e respeito absoluto ao capital humano.</p>"
+          "<p>A ACT é uma consultoria fundada em 2009 e especializada em Organização, Desenvolvimento e Expansão Empresarial. Atuamos de forma estratégica, técnica e humana — conduzindo empresas, líderes e comunidades em processos de transformação madura, artesanal, tecnológica, silenciosa e profundamente efetiva. E afetiva.</p>",
+          "<p>Nosso trabalho integra gestão, inovação, cultura e educação voltados ao futuro, sustentado por uma abordagem nexialista, que conecta diferentes áreas do conhecimento com visão sistêmica e aplicada. Acreditamos na força das organizações, sejam empresariais ou sociais, como instrumentos capazes de promover bem-estar, dignidade, pertencimento e resultados sustentáveis.</p>",
+          "<p>Trabalhamos com empresas de diferentes portes e segmentos, conduzindo projetos que vão desde a estruturação de um novo negócio até processos complexos de facilities, expansão, sucessão e valuation. Ao longo dessa jornada, consolidamos uma atuação baseada em análises precisas, integração multidisciplinar e respeito absoluto ao capital humano.</p>"
         ],
         buttonText: "Conheça mais"
       },
@@ -351,8 +352,9 @@ const translations = {
       history: {
         title: "Sobre nós",
         content: [
-          "<p>A ACT é uma consultoria fundada em 2009 e especializada em Organização, Desenvolvimento e Expansão Empresarial. Atuamos de forma estratégica, técnica e humana — conduzindo empresas, líderes e comunidades em processos de transformação madura, artesanal, tecnológica, silenciosa e profundamente efetiva. E, afetiva!</p>",
-          "<p>Nosso trabalho integra gestão, inovação, cultura e educação voltados ao futuro. Acreditamos na força das organizações, sejam empresariais ou sociais, como instrumentos capazes de promover bem-estar, dignidade, pertencimento e resultados sustentáveis. Trabalhamos com empresas de diferentes portes e segmentos, conduzindo projetos que vão desde a estruturação de um novo negócio até processos complexos de facilities, expansão, sucessão e valuation. Ao longo dessa jornada, construímos uma abordagem única: análises precisas, visão sistêmica e respeito absoluto ao capital humano.</p>",
+          "<p>A ACT é uma consultoria fundada em 2009 e especializada em Organização, Desenvolvimento e Expansão Empresarial. Atuamos de forma estratégica, técnica e humana — conduzindo empresas, líderes e comunidades em processos de transformação madura, artesanal, tecnológica, silenciosa e profundamente efetiva. E afetiva.</p>",
+          "<p>Nosso trabalho integra gestão, inovação, cultura e educação voltados ao futuro, sustentado por uma abordagem nexialista, que conecta diferentes áreas do conhecimento com visão sistêmica e aplicada. Acreditamos na força das organizações, sejam empresariais ou sociais, como instrumentos capazes de promover bem-estar, dignidade, pertencimento e resultados sustentáveis.</p>",
+          "<p>Trabalhamos com empresas de diferentes portes e segmentos, conduzindo projetos que vão desde a estruturação de um novo negócio até processos complexos de facilities, expansão, sucessão e valuation. Ao longo dessa jornada, consolidamos uma atuação baseada em análises precisas, integração multidisciplinar e respeito absoluto ao capital humano.</p>",
           "<p><strong>A ACT atua nas seguintes demandas, expertises, pilares e propósitos:</strong></p>",
           "<h3 style='margin-top: 1.5rem; color: var(--secondary-color);'>DEMANDAS</h3>",
           "<p>Indústrias – Varejos – Serviços – Organizações & Instituições Diversas</p>",
